@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capital Media Partners – Immersive Web Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=outfit:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.6/build/spline-viewer.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+            },
+            colors: {
+              primary: '#8b5cf6', // Violet-500: Brighter, more visible purple
+              secondary: '#22d3ee', // Cyan-400: Electric cyan for high contrast
+              'primary-dark': '#7c3aed',
+              'secondary-dark': '#06b6d4',
+              'dark-bg': '#0F172A', // Very deep purple-black for depth
+              'light-text': '#f3f4f6', // Gray-100: Almost white for readability
+              'muted-text': '#94a3b8', // Gray-400
+              'glass-border': 'rgba(255, 255, 255, 0.12)',
+              'glass-bg': 'rgba(255, 255, 255, 0.03)',
+            },
+            animation: {
+                marquee: 'marquee 60s linear infinite',
+                'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+                marquee: {
+                    '0%': { transform: 'translateX(0)' },
+                    '100%': { transform: 'translateX(-50%)' },
+                },
+                float: {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-20px)' },
+                }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        cursor: none;
+        background-color: #0F172A;
+        overflow-x: hidden;
+      }
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .preserve-3d {
+        transform-style: preserve-3d;
+      }
+      .backface-hidden {
+        backface-visibility: hidden;
+      }
+      .magnetic-button, .magnetic-link {
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0F172A;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #8b5cf6;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "gsap/": "https://aistudiocdn.com/gsap@^3.13.0/",
+    "gsap": "https://aistudiocdn.com/gsap@^3.13.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25",
+    "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.4.2",
+    "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^10.7.7",
+    "three": "https://aistudiocdn.com/three@^0.181.2"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
