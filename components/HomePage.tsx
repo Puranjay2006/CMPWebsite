@@ -7,6 +7,7 @@ import { useCursor } from '../contexts/CursorContext';
 import Magnetic from './Magnetic';
 import { motion, AnimatePresence } from 'framer-motion';
 import { assets } from '../assets';
+import AnimatedText from './AnimatedText';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -90,7 +91,7 @@ const Hero: React.FC<{onNavigate: HomePageProps['onNavigate']}> = ({ onNavigate 
       <div className="container mx-auto px-4 sm:px-6 relative z-20 flex flex-col">
         
         {/* Trusted By Section (Marquee) - Attached marqueeRef */}
-        <div ref={marqueeRef} className="w-full pointer-events-auto hero-stagger z-30 mb-6 mt-4 lg:mt-6 relative group">
+        <div ref={marqueeRef} className="w-full pointer-events-auto hero-stagger z-30 mb-6 mt-4 lg:mt-2 relative group">
             <div className="relative w-full mx-auto">
                 <div className="rounded-2xl p-[1px] bg-gradient-to-r from-primary/50 via-purple-500/50 to-secondary/50 shadow-2xl">
                     <div className="relative w-full overflow-hidden rounded-[calc(1rem-1px)] py-8 bg-gradient-to-r from-white/5 via-white/10 to-white/5 backdrop-blur-md">
@@ -113,13 +114,13 @@ const Hero: React.FC<{onNavigate: HomePageProps['onNavigate']}> = ({ onNavigate 
                     </div>
                 </div>
             </div>
-            <div className="absolute -bottom-9 left-0 w-full text-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-[-10px] group-hover:translate-y-0 pointer-events-none">
+            <div className="absolute -bottom-7 left-0 w-full text-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-[-10px] group-hover:translate-y-0 pointer-events-none">
                 <span className="text-xs sm:text-sm font-bold tracking-[0.2em] text-secondary uppercase drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]">Trusted by NZ Businesses</span>
             </div>
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center pointer-events-none">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 lg:-mt-48 items-center pointer-events-none">
             
             {/* Text Content - Attached textRef */}
             <div ref={textRef} className="text-center lg:text-left z-20 pointer-events-auto flex flex-col justify-center relative">
@@ -458,7 +459,7 @@ const Products: React.FC<{onNavigate: HomePageProps['onNavigate']}> = ({ onNavig
 
 const Partnership: React.FC = () => (
     <section className="py-12 lg:py-24 px-4 sm:px-6 border-t border-glass-border">
-        <div className="max-w-5xl mx-auto text-center reveal-card bg-white/5 border border-glass-border rounded-3xl p-10 sm:p-16 backdrop-blur-lg">
+        <div className="max-w-5xl mx-auto text-center reveal-card bg-white/5 border border-primary/50 hover:border-primary transition-all duration-300 rounded-3xl p-10 sm:p-16 backdrop-blur-lg">
             <div className="inline-flex items-center px-6 py-2 rounded-full border border-pink-500/50 bg-pink-500/10 mb-8 shadow-[0_0_15px_rgba(236,72,153,0.3)] backdrop-blur-sm">
                 <span className="w-2 h-2 bg-pink-500 rounded-full mr-3 animate-pulse"></span>
                 <span className="text-sm font-bold tracking-widest text-pink-400 uppercase">Community Impact</span>
