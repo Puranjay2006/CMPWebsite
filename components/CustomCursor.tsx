@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { useCursor } from '../contexts/CursorContext';
@@ -86,7 +87,7 @@ const CustomCursor: React.FC = () => {
       {isVisible && (
         <>
         <motion.div
-          className="fixed top-0 left-0 rounded-full pointer-events-none z-[9999] border-solid"
+          className="fixed top-0 left-0 rounded-full pointer-events-none z-[10001] border-solid"
           style={{
             x: mousePosition.x - 16,
             y: mousePosition.y - 16,
@@ -95,7 +96,7 @@ const CustomCursor: React.FC = () => {
           animate={cursorVariant}
         />
         <motion.div
-          className="fixed top-0 left-0 rounded-full pointer-events-none z-[9999]"
+          className="fixed top-0 left-0 rounded-full pointer-events-none z-[10001]"
            style={{
             x: mousePosition.x - 4,
             y: mousePosition.y - 4,

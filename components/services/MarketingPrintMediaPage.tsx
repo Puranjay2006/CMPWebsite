@@ -50,9 +50,11 @@ const Hero: React.FC<{onNavigate: ServicePageProps['onNavigate']}> = ({ onNaviga
                         </Magnetic>
                     </div>
                 </div>
-                <div className="hidden lg:flex justify-center mt-8 lg:mt-0 perspective-1000">
-                    <div className="hero-image relative transform-style-3d hover:rotate-y-6 hover:rotate-x-6 transition-transform duration-700 ease-out">
-                        <img src={assets.hero.marketing} alt="Marketing Services" className="w-full h-auto rounded-3xl shadow-2xl shadow-secondary/20 border border-glass-border object-cover" style={{ maxWidth: '600px' }} />
+                <div className="hidden lg:flex justify-center mt-8 lg:mt-0 perspective-1000 group">
+                    <div className="relative h-[250px] sm:h-[350px] lg:h-[420px] w-full rounded-3xl overflow-hidden border border-glass-border shadow-2xl transform transition-all duration-700 ease-out group-hover:rotate-y-6 group-hover:rotate-x-6 group-hover:scale-105 group-hover:shadow-[0_20px_50px_rgba(139,92,246,0.3)]">
+                        <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none"></div>
+                        <div className="absolute inset-0 bg-primary/10 mix-blend-overlay z-10 pointer-events-none"></div>
+                        <img src={assets.hero.marketing} alt="Marketing Services" className="w-full h-full object-cover filter brightness-90 contrast-110" />
                     </div>
                 </div>
             </div>
@@ -191,8 +193,7 @@ const MarketingPrintMediaPage: React.FC<ServicePageProps> = ({ onNavigate }) => 
                 gsap.from(card, { y: 100, opacity: 0, rotationX: 10, duration: 1, ease: "back.out(1.2)", scrollTrigger: { trigger: card, start: "top 90%", toggleActions: "play none none reverse" } });
             });
             const tl = gsap.timeline();
-            tl.from(".hero-stagger", { y: 80, opacity: 0, stagger: 0.15, duration: 1.2, ease: "power3.out", delay: 0.2 })
-              .from(".hero-image", { scale: 0.8, opacity: 0, rotationY: -15, rotationX: 10, duration: 1.5, ease: "power3.out" }, "-=1");
+            tl.from(".hero-stagger", { y: 80, opacity: 0, stagger: 0.15, duration: 1.2, ease: "power3.out", delay: 0.2 });
         }, mainRef);
         return () => ctx.revert();
     }, []);

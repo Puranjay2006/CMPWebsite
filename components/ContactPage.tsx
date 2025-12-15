@@ -22,8 +22,8 @@ interface ContactPageProps {
 
 const ContactHero: React.FC<{onNavigate: ContactPageProps['onNavigate']}> = ({ onNavigate }) => (
     <section className="relative min-h-screen flex items-center justify-center pt-28 pb-16 lg:pb-32 overflow-hidden perspective-1000">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] pointer-events-none -z-10 animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[128px] pointer-events-none -z-10 animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="parallax-bg absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] pointer-events-none -z-10 animate-pulse" data-speed="0.5"></div>
+        <div className="parallax-bg absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[128px] pointer-events-none -z-10 animate-pulse" style={{animationDelay: '2s'}} data-speed="0.3"></div>
 
         <div className="container mx-auto py-10 sm:py-16 lg:py-20 px-4 sm:px-6 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -73,10 +73,11 @@ const ContactHero: React.FC<{onNavigate: ContactPageProps['onNavigate']}> = ({ o
                     </div>
                 </div>
 
-                <div className="hidden lg:flex justify-center mt-8 lg:mt-0 perspective-1000">
-                    <div className="hero-image relative transform-style-3d hover:rotate-y-6 hover:rotate-x-6 transition-transform duration-700 ease-out">
-                        <img src={assets.hero.contact} alt="Contact Capital Media Partners" className="w-full h-auto rounded-3xl shadow-2xl shadow-secondary/20 border border-glass-border object-cover" style={{ maxWidth: '600px' }} />
-                        <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-3xl blur-2xl -z-10 opacity-60"></div>
+                <div className="hidden lg:flex justify-center mt-8 lg:mt-0 perspective-1000 group p-2 sm:p-0">
+                    <div className="relative h-[250px] sm:h-[350px] lg:h-[420px] w-full rounded-3xl overflow-hidden border border-glass-border shadow-2xl transform transition-all duration-700 ease-out rotate-y-6 rotate-x-6 scale-95 hover:rotate-y-0 hover:rotate-x-0 hover:scale-100 hover:shadow-[0_20px_50px_rgba(139,92,246,0.3)]">
+                        <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none"></div>
+                        <div className="absolute inset-0 bg-primary/10 mix-blend-overlay z-10 pointer-events-none"></div>
+                        <img src={assets.hero.contact} alt="Contact Capital Media Partners" className="w-full h-full object-cover filter brightness-90 contrast-110" />
                     </div>
                 </div>
             </div>
@@ -168,7 +169,7 @@ const ContactFormSection: React.FC<{onNavigate: ContactPageProps['onNavigate']}>
                     <h2 className="reveal-text text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">Let's Start a Conversation</h2>
                     <Interactive variant="text"><p className="reveal-text text-lg text-gray-400 max-w-2xl mx-auto">Fill out the form below and our team will get back to you within 24 hours to discuss your business needs.</p></Interactive>
                 </div>
-                <div className="reveal-card bg-dark-bg/50 border border-glass-border p-8 rounded-3xl backdrop-blur-md relative overflow-hidden">
+                <div className="reveal-card bg-dark-bg/50 border border-glass-border p-6 sm:p-8 rounded-3xl backdrop-blur-md relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
                     <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-secondary/10 to-transparent rounded-full translate-y-12 -translate-x-12"></div>
                     <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
@@ -196,13 +197,13 @@ const ContactFormSection: React.FC<{onNavigate: ContactPageProps['onNavigate']}>
                         <div className="relative">
                             <label htmlFor="service" className="flex items-center text-sm font-medium text-gray-300 mb-2"><i className="fas fa-cogs text-primary mr-2"></i>Service Interest *</label>
                             <select id="service" name="service" required onChange={handleChange} className="w-full pl-4 pr-4 py-3 border border-glass-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 bg-white/5 text-white appearance-none">
-                                <option value="">Select a service...</option>
-                                <option value="business-advisory">Business Advisory Services</option>
-                                <option value="marketing">Marketing & Print Media</option>
-                                <option value="technology-ai">Technology & AI Solutions</option>
-                                <option value="insurance">Insurance Advisory</option>
-                                <option value="multiple">Multiple Services</option>
-                                <option value="other">Other</option>
+                                <option value="" className="bg-dark-bg text-gray-300">Select a service...</option>
+                                <option value="business-advisory" className="bg-dark-bg text-white">Business Advisory Services</option>
+                                <option value="marketing" className="bg-dark-bg text-white">Marketing & Print Media</option>
+                                <option value="technology-ai" className="bg-dark-bg text-white">Technology & AI Solutions</option>
+                                <option value="insurance" className="bg-dark-bg text-white">Insurance Advisory</option>
+                                <option value="multiple" className="bg-dark-bg text-white">Multiple Services</option>
+                                <option value="other" className="bg-dark-bg text-white">Other</option>
                             </select>
                             <i className="fas fa-chevron-down absolute right-4 top-10 text-gray-400 pointer-events-none"></i>
                         </div>
@@ -315,8 +316,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                 gsap.from(card, { y: 100, opacity: 0, rotationX: 10, duration: 1, ease: "back.out(1.2)", scrollTrigger: { trigger: card, start: "top 90%", toggleActions: "play none none reverse" } });
             });
             const tl = gsap.timeline();
-            tl.from(".hero-stagger", { y: 80, opacity: 0, stagger: 0.15, duration: 1.2, ease: "power3.out", delay: 0.2 })
-              .from(".hero-image", { scale: 0.8, opacity: 0, rotationY: -15, rotationX: 10, duration: 1.5, ease: "power3.out" }, "-=1");
+            tl.from(".hero-stagger", { y: 80, opacity: 0, stagger: 0.15, duration: 1.2, ease: "power3.out", delay: 0.2 });
         }, mainRef);
         return () => ctx.revert();
     }, []);

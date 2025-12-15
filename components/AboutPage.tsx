@@ -21,9 +21,9 @@ interface AboutPageProps {
 }
 
 const AboutHero: React.FC<{onNavigate: AboutPageProps['onNavigate']}> = ({ onNavigate }) => (
-    <section className="relative min-h-screen flex items-center justify-center pt-28 pb-16 lg:pb-32 overflow-hidden perspective-1000">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] pointer-events-none -z-10 animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[128px] pointer-events-none -z-10 animate-pulse" style={{animationDelay: '2s'}}></div>
+    <section className="relative min-h-screen flex items-center justify-center pt-28 pb-16 lg:pb-32 overflow-hidden">
+        <div className="parallax-bg absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] pointer-events-none -z-10 animate-pulse" data-speed="0.5"></div>
+        <div className="parallax-bg absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[128px] pointer-events-none -z-10 animate-pulse" style={{animationDelay: '2s'}} data-speed="0.3"></div>
 
         <div className="container mx-auto py-10 sm:py-16 lg:py-20 px-4 sm:px-6 relative z-10">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
@@ -69,10 +69,11 @@ const AboutHero: React.FC<{onNavigate: AboutPageProps['onNavigate']}> = ({ onNav
                     </div>
                 </div>
 
-                <div className="hidden lg:flex justify-center lg:justify-end mt-8 lg:mt-0 perspective-1000">
-                    <div className="hero-image relative transform-style-3d hover:rotate-y-6 hover:rotate-x-6 transition-transform duration-700 ease-out">
-                        <img src={assets.hero.about} alt="About Capital Media Partners" className="w-full h-auto rounded-3xl shadow-2xl shadow-primary/20 border border-glass-border" style={{ maxWidth: '600px' }} />
-                        <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-3xl blur-2xl -z-10 opacity-60"></div>
+                <div className="hidden lg:flex justify-center lg:justify-end mt-8 lg:mt-0 perspective-1000 group p-2 sm:p-0">
+                    <div className="relative h-[250px] sm:h-[350px] lg:h-[420px] w-full rounded-3xl overflow-hidden border border-glass-border shadow-2xl transform transition-all duration-700 ease-out rotate-y-6 rotate-x-6 scale-95 hover:rotate-y-0 hover:rotate-x-0 hover:scale-100 hover:shadow-[0_20px_50px_rgba(139,92,246,0.3)]">
+                        <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none"></div>
+                        <div className="absolute inset-0 bg-primary/10 mix-blend-overlay z-10 pointer-events-none"></div>
+                        <img src={assets.hero.about} alt="About Capital Media Partners" className="w-full h-full object-cover filter brightness-90 contrast-110" />
                     </div>
                 </div>
             </div>
@@ -112,8 +113,8 @@ const CompanyStats: React.FC = () => (
 
 const OurStory: React.FC = () => (
     <section className="relative py-16 lg:py-32">
-        <div className="absolute -top-40 -left-24 w-[360px] h-[360px] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="absolute top-1/4 right-[-160px] w-[460px] h-[460px] bg-secondary/10 rounded-full opacity-40 blur-3xl pointer-events-none"></div>
+        <div className="parallax-bg absolute -top-40 -left-24 w-[360px] h-[360px] bg-primary/10 rounded-full blur-3xl pointer-events-none" data-speed="0.2"></div>
+        <div className="parallax-bg absolute top-1/4 right-[-160px] w-[460px] h-[460px] bg-secondary/10 rounded-full opacity-40 blur-3xl pointer-events-none" data-speed="0.4"></div>
         <div className="max-w-6xl mx-auto relative z-10 px-4 sm:px-6">
             <div className="grid lg:grid-cols-[1.15fr,0.85fr] gap-12 lg:gap-16 items-center">
                 <div className="space-y-8">
@@ -125,7 +126,7 @@ const OurStory: React.FC = () => (
                         <h2 className="reveal-text mt-6 text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">Building partnerships that matter</h2>
                     </div>
                     <Interactive variant="text">
-                        <div className="reveal-text space-y-4 text-lg text-gray-300 leading-relaxed">
+                        <div className="reveal-text space-y-4 text-base sm:text-lg text-gray-300 leading-relaxed">
                         <p>
                             Capital Media Partners was born from a simple belief: businesses succeed when they have the right guidance at the right time. Founded in New Zealand, we recognized that startups and growing companies needed more than just individual services—they needed integrated solutions that work together seamlessly.
                         </p>
@@ -151,11 +152,13 @@ const OurStory: React.FC = () => (
                         </div>
                     </div>
                 </div>
-                <div className="relative perspective-1000">
-                    <div className="reveal-card rounded-3xl overflow-hidden border border-glass-border shadow-2xl shadow-secondary/10 bg-dark-bg/50 backdrop-blur-sm">
-                        <img src={assets.general.team} alt="Capital Media Partners Team" className="w-full h-full object-cover" />
+                <div className="relative perspective-1000 group p-2 sm:p-0">
+                    <div className="h-[250px] lg:h-[420px] w-full rounded-3xl overflow-hidden border border-glass-border shadow-2xl transform transition-all duration-700 ease-out rotate-y-6 rotate-x-6 scale-95 hover:rotate-y-0 hover:rotate-x-0 hover:scale-100 hover:shadow-[0_20px_50px_rgba(139,92,246,0.3)]">
+                        <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none"></div>
+                        <div className="absolute inset-0 bg-primary/10 mix-blend-overlay z-10 pointer-events-none"></div>
+                        <img src={assets.general.team} alt="Capital Media Partners Team" className="w-full h-full object-cover filter brightness-90 contrast-110" />
                     </div>
-                    <div className="reveal-card absolute -bottom-8 -right-8 sm:bottom-6 sm:left-6 sm:right-6 bg-dark-bg/80 backdrop-blur-xl border border-glass-border rounded-2xl shadow-xl p-6 flex items-start gap-4">
+                    <div className="reveal-card absolute -bottom-8 -right-8 sm:bottom-6 sm:left-6 sm:right-6 bg-dark-bg/80 backdrop-blur-xl border border-glass-border rounded-2xl shadow-xl p-6 flex items-start gap-4 z-20">
                         <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                             <i className="fas fa-seedling text-xl"></i>
                         </div>
@@ -338,15 +341,22 @@ const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
                 duration: 1.2,
                 ease: "power3.out",
                 delay: 0.2
-            })
-            .from(".hero-image", {
-                scale: 0.8,
-                opacity: 0,
-                rotationY: -15,
-                rotationX: 10,
-                duration: 1.5,
-                ease: "power3.out"
-            }, "-=1");
+            });
+
+            // Parallax Effect
+            gsap.utils.toArray('.parallax-bg').forEach((bg: any) => {
+                const speed = bg.getAttribute('data-speed') || 0.2;
+                gsap.to(bg, {
+                    y: (i, target) => ScrollTrigger.maxScroll(window) * speed,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: "body",
+                        start: "top top",
+                        end: "bottom bottom",
+                        scrub: 0
+                    }
+                });
+            });
 
         }, mainRef);
         return () => ctx.revert();

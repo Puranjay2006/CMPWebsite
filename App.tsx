@@ -14,6 +14,7 @@ import MarketingPrintMediaPage from './components/services/MarketingPrintMediaPa
 import TechnologyAIPage from './components/services/TechnologyAIPage';
 import InsuranceAdvisoryPage from './components/services/InsuranceAdvisoryPage';
 import ThreeCanvas from './components/ThreeCanvas';
+import SearchOverlay from './components/SearchOverlay';
 import { useCursor } from './contexts/CursorContext';
 import Magnetic from './components/Magnetic';
 import ScrollToTop from './components/ScrollToTop';
@@ -30,14 +31,21 @@ const Interactive: React.FC<{children: React.ReactElement<any>, variant?: 'link'
 interface HeaderProps {
     onNavigate: (page: string, hash?: string) => void;
     currentPage: string;
+    onToggleSearch: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
-    const [isServicesOpen, setIsServicesOpen] = useState(false);
+const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage, onToggleSearch }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+    const [isDirectoryModalOpen, setIsDirectoryModalOpen] = useState(false);
 
     const handleNav = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, page: string, hash?: string) => {
         e.preventDefault();
+        if (page === 'company-directories') {
+            setIsDirectoryModalOpen(true);
+            setIsMobileMenuOpen(false);
+            return;
+        }
         onNavigate(page, hash);
         setIsMobileMenuOpen(false);
     };
@@ -45,31 +53,25 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
     const navLinks = [
         { name: 'Home', page: 'home' },
         { name: 'About', page: 'about' },
-        { name: 'Services', page: 'services-dropdown' },
+        { name: 'Services', page: 'home', hash: 'services' },
+        { name: 'Company Directories', page: 'company-directories' },
         { name: 'Contact', page: 'contact' },
     ];
     
-    const servicesLinks = [
-        { name: 'Business Advisory', page: 'service-business', icon: 'fa-business-time', description: 'Company registration & compliance' },
-        { name: 'Marketing & Print Media', page: 'service-marketing', icon: 'fa-print', description: 'Targeted campaigns & branding' },
-        { name: 'Technology & AI Solutions', page: 'service-tech', icon: 'fa-microchip', description: 'AkoDesk AI & automation' },
-        { name: 'Insurance Advisory', page: 'service-insurance', icon: 'fa-shield-alt', description: 'Tailored protection plans' },
+    const servicesSubLinks = [
+        { name: 'Business Advisory', page: 'service-business', icon: 'fa-business-time' },
+        { name: 'Marketing & Print', page: 'service-marketing', icon: 'fa-print' },
+        { name: 'Technology & AI', page: 'service-tech', icon: 'fa-microchip' },
+        { name: 'Insurance Advisory', page: 'service-insurance', icon: 'fa-shield-alt' },
     ];
 
-    const dropdownVariants = {
-        hidden: { opacity: 0, scale: 0.98, y: -10, pointerEvents: 'none' as const },
-        visible: { opacity: 1, scale: 1, y: 0, pointerEvents: 'auto' as const }
-    };
-
-    const [isServicesAccordionOpen, setIsServicesAccordionOpen] = useState(false);
-
     useEffect(() => {
-        if(isMobileMenuOpen) {
+        if(isMobileMenuOpen || isDirectoryModalOpen) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = '';
         }
-    }, [isMobileMenuOpen]);
+    }, [isMobileMenuOpen, isDirectoryModalOpen]);
 
     // Close mobile menu on resize if screen becomes large
     useEffect(() => {
@@ -103,93 +105,99 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
                         </div>
                     </a>
                 </Interactive>
+                
                 {/* Desktop Nav - Visible on Large Screens */}
-                <nav className="hidden lg:flex items-center space-x-8">
-                    {navLinks.map((link) => {
-                        const isActive = currentPage === link.page;
-                        if (link.page === 'services-dropdown') {
-                            return (
-                                <div 
-                                    key={link.name}
-                                    className="relative"
-                                    onMouseEnter={() => setIsServicesOpen(true)}
-                                    onMouseLeave={() => setIsServicesOpen(false)}
-                                >
-                                    <div className="relative">
-                                      <Magnetic>
-                                          <Interactive>
-                                              <button 
-                                                className="flex items-center gap-2 text-sm font-medium text-light-text hover:text-secondary transition-colors duration-300 uppercase tracking-widest px-2 py-1"
-                                                onClick={() => setIsServicesOpen(!isServicesOpen)}
-                                              >
-                                                  Services 
-                                                  <motion.i 
-                                                      className="fas fa-chevron-down text-xs"
-                                                      animate={{ rotate: isServicesOpen ? 180 : 0 }}
-                                                      transition={{ duration: 0.3 }}
-                                                  ></motion.i>
-                                              </button>
-                                          </Interactive>
-                                      </Magnetic>
-                                      <span className={`absolute -bottom-2 left-2 w-[calc(100%-16px)] h-0.5 bg-secondary transform transition-transform duration-300 ${isServicesOpen ? 'scale-x-100' : 'scale-x-0'}`}></span>
-                                    </div>
-                                    <motion.div 
-                                        className="absolute top-full right-0 w-[800px] origin-top-right pt-4"
-                                        variants={dropdownVariants}
-                                        initial="hidden"
-                                        animate={isServicesOpen ? "visible" : "hidden"}
-                                        transition={{ duration: 0.2, ease: 'easeOut' }}
+                <div className="hidden lg:flex items-center gap-8">
+                    <nav className="flex items-center space-x-8">
+                        {navLinks.map((link) => {
+                            const isActive = currentPage === link.page;
+                            const isHomeLink = link.name === 'Home' && !link.hash;
+                            
+                            if (link.name === 'Services') {
+                                return (
+                                    <div 
+                                        key={link.name}
+                                        className="relative group" 
+                                        onMouseEnter={() => setHoveredLink('Services')} 
+                                        onMouseLeave={() => setHoveredLink(null)}
                                     >
-                                      <div className="pl-4">
-                                        <div className="bg-[#0f0b29] backdrop-blur-xl border border-glass-border rounded-2xl shadow-2xl p-6 overflow-hidden">
-                                            <div className="grid grid-cols-2 gap-6">
-                                                {servicesLinks.map(service => (
-                                                    <Interactive key={service.name}>
-                                                        <a href="#" onClick={(e) => {handleNav(e, service.page); setIsServicesOpen(false); }} className="group flex items-center gap-4 px-4 py-4 text-sm text-light-text hover:bg-[#581c87] rounded-xl transition-colors duration-200 border border-transparent hover:border-white/10">
-                                                            <div className="w-14 h-14 rounded-xl flex items-center justify-center bg-[#2e1065] text-primary group-hover:bg-[#7e22ce] group-hover:text-white transition-all duration-300 flex-shrink-0">
-                                                                <i className={`fas ${service.icon} text-2xl`}></i>
-                                                            </div>
-                                                            <div className="flex-1 min-w-0">
-                                                                <p className="font-bold text-white text-lg group-hover:text-white mb-1">{service.name}</p>
-                                                                <p className="text-sm text-gray-400 truncate group-hover:text-gray-200">{service.description}</p>
-                                                            </div>
-                                                        </a>
-                                                    </Interactive>
-                                                ))}
-                                            </div>
-                                            <div className="mt-6 pt-4 border-t border-white/10">
-                                                <Interactive>
-                                                    <a href="#" onClick={(e) => {handleNav(e, 'home', 'services'); setIsServicesOpen(false); }} className="group flex items-center justify-center gap-3 px-4 py-5 bg-[#2e1065] hover:bg-[#581c87] text-white font-bold rounded-xl transition-all duration-300 w-full text-lg">
-                                                        <div className="w-8 h-8 rounded-full bg-[#581c87] group-hover:bg-[#7e22ce] flex items-center justify-center transition-colors">
-                                                            <div className="w-2 h-2 rounded-full bg-[#c084fc]"></div>
-                                                        </div>
-                                                        <span>Explore All Services</span> 
-                                                        <i className="fas fa-arrow-right ml-auto transition-transform group-hover:translate-x-1"></i>
-                                                    </a>
-                                                </Interactive>
-                                            </div>
-                                          </div>
+                                        <div className="relative py-2">
+                                            <Interactive>
+                                                <a 
+                                                    href={link.hash ? `#${link.hash}` : '#'} 
+                                                    onClick={(e) => handleNav(e, link.page, link.hash)} 
+                                                    className={`text-sm font-medium hover:text-secondary transition-colors duration-300 uppercase tracking-widest flex items-center gap-1 ${isActive && isHomeLink ? 'text-secondary' : 'text-light-text'}`}
+                                                >
+                                                    {link.name} <i className="fas fa-chevron-down text-[10px] opacity-70 transition-transform group-hover:rotate-180"></i>
+                                                </a>
+                                            </Interactive>
+                                            <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-secondary transform transition-transform duration-300 ${isActive && isHomeLink ? 'scale-x-100' : 'scale-x-0'}`}></span>
                                         </div>
-                                    </motion.div>
-                                </div>
-                            )
-                        }
-                        return (
-                            <Magnetic key={link.name}>
-                                <div className="relative">
-                                    <Interactive>
-                                        <a href={'#'} onClick={(e) => handleNav(e, link.page)} className={`text-sm font-medium hover:text-secondary transition-colors duration-300 uppercase tracking-widest ${isActive ? 'text-secondary' : 'text-light-text'}`}>
-                                            {link.name}
-                                        </a>
-                                    </Interactive>
-                                    <span className={`absolute -bottom-2 left-0 w-full h-0.5 bg-secondary transform transition-transform duration-300 ${isActive ? 'scale-x-100' : 'scale-x-0'}`}></span>
-                                </div>
-                            </Magnetic>
-                        );
-                    })}
-                </nav>
-                {/* Mobile Menu Button - Visible up to Large Screens */}
-                <div className="lg:hidden text-light-text">
+
+                                        <AnimatePresence>
+                                            {hoveredLink === 'Services' && (
+                                                <motion.div
+                                                    initial={{ opacity: 0, y: 15, scale: 0.95 }}
+                                                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                                                    exit={{ opacity: 0, y: 15, scale: 0.95 }}
+                                                    transition={{ duration: 0.2 }}
+                                                    className="absolute top-full -left-12 w-64 bg-[#0F172A] border border-glass-border rounded-xl shadow-2xl p-2 overflow-hidden z-50 backdrop-blur-xl"
+                                                >
+                                                    {servicesSubLinks.map(sub => (
+                                                        <Interactive key={sub.name}>
+                                                            <a 
+                                                                href="#"
+                                                                onClick={(e) => handleNav(e, sub.page)}
+                                                                className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors group/item"
+                                                            >
+                                                                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-colors">
+                                                                    <i className={`fas ${sub.icon} text-xs`}></i>
+                                                                </div>
+                                                                <span className="text-sm font-medium text-gray-300 group-hover/item:text-white">{sub.name}</span>
+                                                            </a>
+                                                        </Interactive>
+                                                    ))}
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
+                                    </div>
+                                );
+                            }
+
+                            return (
+                                <Magnetic key={link.name}>
+                                    <div className="relative">
+                                        <Interactive>
+                                            <a href={link.hash ? `#${link.hash}` : '#'} onClick={(e) => handleNav(e, link.page, link.hash)} className={`text-sm font-medium hover:text-secondary transition-colors duration-300 uppercase tracking-widest ${isActive && isHomeLink ? 'text-secondary' : 'text-light-text'}`}>
+                                                {link.name}
+                                            </a>
+                                        </Interactive>
+                                        <span className={`absolute -bottom-2 left-0 w-full h-0.5 bg-secondary transform transition-transform duration-300 ${isActive && isHomeLink ? 'scale-x-100' : 'scale-x-0'}`}></span>
+                                    </div>
+                                </Magnetic>
+                            );
+                        })}
+                    </nav>
+
+                    {/* Search Trigger Desktop */}
+                    <Magnetic>
+                        <Interactive>
+                            <button 
+                                onClick={onToggleSearch}
+                                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 text-light-text hover:text-secondary transition-all border border-transparent hover:border-glass-border"
+                                aria-label="Search"
+                            >
+                                <i className="fas fa-search"></i>
+                            </button>
+                        </Interactive>
+                    </Magnetic>
+                </div>
+
+                {/* Mobile Controls (Search + Menu) */}
+                <div className="lg:hidden flex items-center gap-4 text-light-text">
+                    <button onClick={onToggleSearch} className="w-10 h-10 flex items-center justify-center">
+                        <i className="fas fa-search text-xl"></i>
+                    </button>
                     <Magnetic>
                         <button onClick={() => setIsMobileMenuOpen(true)} className="w-10 h-10 flex items-center justify-center">
                             <i className="fas fa-bars text-2xl"></i>
@@ -218,45 +226,41 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
                             </div>
                             <nav className="flex flex-col space-y-6 text-xl text-white flex-grow">
                                 {navLinks.map(link => {
-                                    if(link.page === 'services-dropdown') {
-                                        return (
-                                            <div key={link.name} className="border-b border-white/10 pb-4">
-                                                <button onClick={() => setIsServicesAccordionOpen(!isServicesAccordionOpen)} className="w-full flex justify-between items-center py-2 hover:text-secondary transition-colors">
-                                                    <span>Services</span>
-                                                    <motion.i 
-                                                        className="fas fa-chevron-down text-sm"
-                                                        animate={{ rotate: isServicesAccordionOpen ? 180 : 0 }}
-                                                    ></motion.i>
-                                                </button>
-                                                <AnimatePresence>
-                                                {isServicesAccordionOpen && (
-                                                    <motion.div 
-                                                        initial={{ height: 0, opacity: 0 }}
-                                                        animate={{ height: 'auto', opacity: 1 }}
-                                                        exit={{ height: 0, opacity: 0 }}
-                                                        className="overflow-hidden pl-4 mt-2 flex flex-col gap-4 text-base"
-                                                    >
-                                                        {servicesLinks.map(service => (
-                                                            <a href="#" key={service.name} onClick={(e) => handleNav(e, service.page)} className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors py-2">
-                                                                <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-secondary">
-                                                                    <i className={`fas ${service.icon} text-sm`}></i>
-                                                                </div>
-                                                                <span>{service.name}</span>
-                                                            </a>
-                                                        ))}
-                                                    </motion.div>
-                                                )}
-                                                </AnimatePresence>
-                                            </div>
-                                        )
-                                    }
                                     const isActive = currentPage === link.page;
+                                    const isHomeLink = link.name === 'Home' && !link.hash;
+                                    
+                                    if (link.name === 'Services') {
+                                        return (
+                                            <div key={link.name} className="flex flex-col">
+                                                <a 
+                                                    href={`#${link.hash}`} 
+                                                    onClick={(e) => handleNav(e, link.page, link.hash)}
+                                                    className={`py-2 border-b border-white/10 hover:text-secondary transition-colors flex justify-between items-center ${isActive && isHomeLink ? 'text-secondary' : 'text-white'}`}
+                                                >
+                                                    {link.name}
+                                                </a>
+                                                <div className="pl-4 mt-2 flex flex-col space-y-3 border-l border-white/10">
+                                                    {servicesSubLinks.map(sub => (
+                                                        <a
+                                                            key={sub.name}
+                                                            href="#"
+                                                            onClick={(e) => handleNav(e, sub.page)}
+                                                            className="text-base text-gray-400 hover:text-secondary transition-colors"
+                                                        >
+                                                            {sub.name}
+                                                        </a>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        );
+                                    }
+
                                     return (
                                         <a 
                                             key={link.name} 
-                                            href="#" 
-                                            onClick={(e) => handleNav(e, link.page)}
-                                            className={`py-2 border-b border-white/10 hover:text-secondary transition-colors ${isActive ? 'text-secondary' : 'text-white'}`}
+                                            href={link.hash ? `#${link.hash}` : '#'} 
+                                            onClick={(e) => handleNav(e, link.page, link.hash)}
+                                            className={`py-2 border-b border-white/10 hover:text-secondary transition-colors ${isActive && isHomeLink ? 'text-secondary' : 'text-white'}`}
                                         >
                                             {link.name}
                                         </a>
@@ -277,6 +281,50 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage }) => {
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
                     />
+                )}
+            </AnimatePresence>
+
+            {/* Company Directory Modal */}
+            <AnimatePresence>
+                {isDirectoryModalOpen && (
+                    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setIsDirectoryModalOpen(false)}
+                            className="absolute inset-0 bg-black/60 backdrop-blur-md"
+                        />
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                            className="relative bg-[#0F172A] border border-glass-border p-8 rounded-2xl shadow-2xl max-w-md w-full text-center z-10 overflow-hidden"
+                        >
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+                            <div className="absolute bottom-0 left-0 w-24 h-24 bg-secondary/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+                            
+                            <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-primary/20 rotate-3">
+                                <i className="fas fa-folder-open text-white text-2xl"></i>
+                            </div>
+                            
+                            <h3 className="text-2xl font-bold text-white mb-3">Coming Soon</h3>
+                            <div className="w-12 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-6"></div>
+                            
+                            <p className="text-gray-300 mb-8 leading-relaxed">
+                                We are building a comprehensive <strong>Company Directory</strong> that will allow you to directly access services offered by our sponsor companies—all from one place.
+                            </p>
+                            
+                            <Magnetic>
+                                <button 
+                                    onClick={() => setIsDirectoryModalOpen(false)}
+                                    className="px-8 py-3 bg-gradient-to-r from-primary to-primary-dark text-white font-bold rounded-xl shadow-lg hover:shadow-primary/30 transition-all transform hover:scale-105"
+                                >
+                                    Got It
+                                </button>
+                            </Magnetic>
+                        </motion.div>
+                    </div>
                 )}
             </AnimatePresence>
         </header>
@@ -386,6 +434,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [page, setPage] = useState('home');
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -393,6 +442,18 @@ function App() {
     };
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
+  // Keyboard shortcut for search
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setIsSearchOpen((prev) => !prev);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   const navigate = (targetPage: string, hash?: string) => {
@@ -446,8 +507,17 @@ function App() {
         <CustomCursor />
         <ThreeCanvas mousePosition={mousePosition} />
         <ScrollToTop />
+        <SearchOverlay 
+          isOpen={isSearchOpen} 
+          onClose={() => setIsSearchOpen(false)} 
+          onNavigate={navigate} 
+        />
         <div className="relative z-10">
-          <Header onNavigate={navigate} currentPage={page} />
+          <Header 
+            onNavigate={navigate} 
+            currentPage={page} 
+            onToggleSearch={() => setIsSearchOpen(true)}
+          />
           <AnimatePresence mode="wait">
             <motion.div
               key={page}

@@ -22,8 +22,8 @@ interface ServicePageProps {
 
 const Hero: React.FC<{onNavigate: ServicePageProps['onNavigate']}> = ({ onNavigate }) => (
     <section className="relative min-h-screen flex items-center justify-center pt-28 pb-24 lg:pb-32 overflow-hidden perspective-1000">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] pointer-events-none -z-10 animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[128px] pointer-events-none -z-10 animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="parallax-bg absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] pointer-events-none -z-10 animate-pulse" data-speed="0.5"></div>
+        <div className="parallax-bg absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[128px] pointer-events-none -z-10 animate-pulse" style={{animationDelay: '2s'}} data-speed="0.3"></div>
         <div className="container mx-auto py-10 sm:py-16 lg:py-20 px-4 sm:px-6 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="text-center lg:text-left">
@@ -52,10 +52,11 @@ const Hero: React.FC<{onNavigate: ServicePageProps['onNavigate']}> = ({ onNaviga
                         </Magnetic>
                     </div>
                 </div>
-                <div className="hidden lg:flex justify-center mt-8 lg:mt-0 perspective-1000">
-                    <div className="hero-image relative transform-style-3d hover:rotate-y-6 hover:rotate-x-6 transition-transform duration-700 ease-out">
-                        <img src={assets.hero.business} alt="Business Advisory Services" className="w-full h-auto rounded-3xl shadow-2xl shadow-primary/20 border border-glass-border object-cover" style={{ maxWidth: '600px' }} />
-                        <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-3xl blur-2xl -z-10 opacity-60"></div>
+                <div className="hidden lg:flex justify-center mt-8 lg:mt-0 perspective-1000 group p-2 sm:p-0">
+                    <div className="relative h-[250px] sm:h-[350px] lg:h-[420px] w-full rounded-3xl overflow-hidden border border-glass-border shadow-2xl transform transition-all duration-700 ease-out rotate-y-6 rotate-x-6 scale-95 hover:rotate-y-0 hover:rotate-x-0 hover:scale-100 hover:shadow-[0_20px_50px_rgba(139,92,246,0.3)]">
+                        <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none"></div>
+                        <div className="absolute inset-0 bg-primary/10 mix-blend-overlay z-10 pointer-events-none"></div>
+                        <img src={assets.hero.business} alt="Business Advisory Services" className="w-full h-full object-cover filter brightness-90 contrast-110" />
                     </div>
                 </div>
             </div>
@@ -208,8 +209,7 @@ const BusinessAdvisoryPage: React.FC<ServicePageProps> = ({ onNavigate }) => {
                 gsap.from(card, { y: 100, opacity: 0, rotationX: 10, duration: 1, ease: "back.out(1.2)", scrollTrigger: { trigger: card, start: "top 90%", toggleActions: "play none none reverse" } });
             });
             const tl = gsap.timeline();
-            tl.from(".hero-stagger", { y: 80, opacity: 0, stagger: 0.15, duration: 1.2, ease: "power3.out", delay: 0.2 })
-              .from(".hero-image", { scale: 0.8, opacity: 0, rotationY: -15, rotationX: 10, duration: 1.5, ease: "power3.out" }, "-=1");
+            tl.from(".hero-stagger", { y: 80, opacity: 0, stagger: 0.15, duration: 1.2, ease: "power3.out", delay: 0.2 });
         }, mainRef);
         return () => ctx.revert();
     }, []);

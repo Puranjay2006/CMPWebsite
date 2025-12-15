@@ -31,7 +31,6 @@ export const assets = {
             { file: "Hibiscus_Jetski_Hire_Logo.jpg", url: "https://hibiscusjetskihire.co.nz/" },
             { file: "Little_Nest_Logo.jpg", url: "https://www.littlenestelc.co.nz/" },
             { file: "logo-basnz.png", url: "https://www.basnz.co.nz/" },
-            { file: "logo-child_cancer_foundation.png", url: "https://childcancer.org.nz/" },
             { file: "logo-jsrlife.jpg", url: "https://www.jsrlife.co.nz/" },
             { file: "logo-penniall.png", url: "https://penniallproject.co.nz/" },
             { file: "Mcl_Roofing_Logo.png", url: "https://www.mclroofing.co.nz/" },
