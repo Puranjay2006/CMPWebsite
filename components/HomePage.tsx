@@ -53,7 +53,7 @@ const Hero: React.FC<{onNavigate: HomePageProps['onNavigate']}> = ({ onNavigate 
 
         // A. Marquee Parallax (Moves slowly)
         gsap.to(marqueeRef.current, {
-            y: 50, // Moves down slightly, feels heavy/anchored
+            y: 200, // Moves down slightly, feels heavy/anchored
             scrollTrigger: scrollConfig
         });
 
@@ -65,13 +65,13 @@ const Hero: React.FC<{onNavigate: HomePageProps['onNavigate']}> = ({ onNavigate 
 
         // C. Rating Section (Moves fastest = feels closest)
         gsap.to(ratingRef.current, {
-            y: 10, 
+            y: 5, 
             scrollTrigger: scrollConfig
         });
 
         // D. Spline Element (Moves slowly = feels far away/background)
         gsap.to(splineRef.current, {
-            y: 120, // Moves slower than text, creating depth between text and 3D model
+            y: 200, // Moves slower than text, creating depth between text and 3D model
             scrollTrigger: scrollConfig
         });
 
