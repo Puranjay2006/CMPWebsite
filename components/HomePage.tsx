@@ -71,7 +71,7 @@ const Hero: React.FC<{onNavigate: HomePageProps['onNavigate']}> = ({ onNavigate 
 
         // D. Spline Element (Moves slowly = feels far away/background)
         gsap.to(splineRef.current, {
-            y: 80, // Moves slower than text, creating depth between text and 3D model
+            y: 120, // Moves slower than text, creating depth between text and 3D model
             scrollTrigger: scrollConfig
         });
 
@@ -120,7 +120,7 @@ const Hero: React.FC<{onNavigate: HomePageProps['onNavigate']}> = ({ onNavigate 
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 lg:-mt-48 items-center pointer-events-none">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 lg:-mt-52 items-center pointer-events-none">
             
             {/* Text Content - Attached textRef */}
             <div ref={textRef} className="text-center lg:text-left z-20 pointer-events-auto flex flex-col justify-center relative">
@@ -178,7 +178,7 @@ const Hero: React.FC<{onNavigate: HomePageProps['onNavigate']}> = ({ onNavigate 
             {/* Spline Element - Attached splineRef */}
             <div ref={splineRef} className="hidden lg:block w-full h-[600px] lg:h-[800px] relative pointer-events-auto z-10 hero-stagger">
                  <div className="absolute inset-0 w-full h-full">
-                     <div className="absolute w-[140%] h-[140%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                     <div className="absolute w-[140%] h-[140%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:-mt-20">
                          {/* @ts-ignore */}
                          <spline-viewer url="https://prod.spline.design/O4luuHSWUL9kVJMQ/scene.splinecode"></spline-viewer>
                      </div>
