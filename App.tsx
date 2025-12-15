@@ -38,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage, onToggleSearch
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [hoveredLink, setHoveredLink] = useState<string | null>(null);
     const [isDirectoryModalOpen, setIsDirectoryModalOpen] = useState(false);
-
+    
     const handleNav = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, page: string, hash?: string) => {
         e.preventDefault();
         if (page === 'company-directories') {
@@ -54,7 +54,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage, onToggleSearch
         { name: 'Home', page: 'home' },
         { name: 'About', page: 'about' },
         { name: 'Services', page: 'home', hash: 'services' },
-        { name: 'Company Directories', page: 'company-directories' },
+        { name: 'Business', page: 'company-directories' },
         { name: 'Contact', page: 'contact' },
     ];
     
@@ -110,9 +110,14 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage, onToggleSearch
                 <div className="hidden lg:flex items-center gap-8">
                     <nav className="flex items-center space-x-8">
                         {navLinks.map((link) => {
-                            const isActive = currentPage === link.page;
-                            const isHomeLink = link.name === 'Home' && !link.hash;
-                            
+                            // Calculate active state
+                            let isEffectiveActive = false;
+                            if (link.name === 'Services') {
+                                isEffectiveActive = ['service-business', 'service-marketing', 'service-tech', 'service-insurance'].includes(currentPage);
+                            } else {
+                                isEffectiveActive = currentPage === link.page;
+                            }
+
                             if (link.name === 'Services') {
                                 return (
                                     <div 
@@ -126,12 +131,12 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage, onToggleSearch
                                                 <a 
                                                     href={link.hash ? `#${link.hash}` : '#'} 
                                                     onClick={(e) => handleNav(e, link.page, link.hash)} 
-                                                    className={`text-sm font-medium hover:text-secondary transition-colors duration-300 uppercase tracking-widest flex items-center gap-1 ${isActive && isHomeLink ? 'text-secondary' : 'text-light-text'}`}
+                                                    className={`text-sm font-medium hover:text-secondary transition-colors duration-300 uppercase tracking-widest flex items-center gap-1 ${isEffectiveActive ? 'text-secondary' : 'text-light-text'}`}
                                                 >
                                                     {link.name} <i className="fas fa-chevron-down text-[10px] opacity-70 transition-transform group-hover:rotate-180"></i>
                                                 </a>
                                             </Interactive>
-                                            <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-secondary transform transition-transform duration-300 ${isActive && isHomeLink ? 'scale-x-100' : 'scale-x-0'}`}></span>
+                                            <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-secondary transform transition-transform duration-300 origin-left scale-x-0 group-hover:scale-x-100 ${isEffectiveActive ? 'scale-x-100' : ''}`}></span>
                                         </div>
 
                                         <AnimatePresence>
@@ -166,13 +171,13 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage, onToggleSearch
 
                             return (
                                 <Magnetic key={link.name}>
-                                    <div className="relative">
+                                    <div className="relative group">
                                         <Interactive>
-                                            <a href={link.hash ? `#${link.hash}` : '#'} onClick={(e) => handleNav(e, link.page, link.hash)} className={`text-sm font-medium hover:text-secondary transition-colors duration-300 uppercase tracking-widest ${isActive && isHomeLink ? 'text-secondary' : 'text-light-text'}`}>
+                                            <a href={link.hash ? `#${link.hash}` : '#'} onClick={(e) => handleNav(e, link.page, link.hash)} className={`text-sm font-medium hover:text-secondary transition-colors duration-300 uppercase tracking-widest ${isEffectiveActive ? 'text-secondary' : 'text-light-text'}`}>
                                                 {link.name}
                                             </a>
                                         </Interactive>
-                                        <span className={`absolute -bottom-2 left-0 w-full h-0.5 bg-secondary transform transition-transform duration-300 ${isActive && isHomeLink ? 'scale-x-100' : 'scale-x-0'}`}></span>
+                                        <span className={`absolute -bottom-2 left-0 w-full h-0.5 bg-secondary transform transition-transform duration-300 origin-left scale-x-0 group-hover:scale-x-100 ${isEffectiveActive ? 'scale-x-100' : ''}`}></span>
                                     </div>
                                 </Magnetic>
                             );
@@ -227,7 +232,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage, onToggleSearch
                             <nav className="flex flex-col space-y-6 text-xl text-white flex-grow">
                                 {navLinks.map(link => {
                                     const isActive = currentPage === link.page;
-                                    const isHomeLink = link.name === 'Home' && !link.hash;
+                                    // For mobile, standard active check is fine, though we could refine Services too.
                                     
                                     if (link.name === 'Services') {
                                         return (
@@ -235,7 +240,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage, onToggleSearch
                                                 <a 
                                                     href={`#${link.hash}`} 
                                                     onClick={(e) => handleNav(e, link.page, link.hash)}
-                                                    className={`py-2 border-b border-white/10 hover:text-secondary transition-colors flex justify-between items-center ${isActive && isHomeLink ? 'text-secondary' : 'text-white'}`}
+                                                    className={`py-2 border-b border-white/10 hover:text-secondary transition-colors flex justify-between items-center ${isActive ? 'text-secondary' : 'text-white'}`}
                                                 >
                                                     {link.name}
                                                 </a>
@@ -260,7 +265,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage, onToggleSearch
                                             key={link.name} 
                                             href={link.hash ? `#${link.hash}` : '#'} 
                                             onClick={(e) => handleNav(e, link.page, link.hash)}
-                                            className={`py-2 border-b border-white/10 hover:text-secondary transition-colors ${isActive && isHomeLink ? 'text-secondary' : 'text-white'}`}
+                                            className={`py-2 border-b border-white/10 hover:text-secondary transition-colors ${isActive ? 'text-secondary' : 'text-white'}`}
                                         >
                                             {link.name}
                                         </a>
@@ -284,7 +289,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage, onToggleSearch
                 )}
             </AnimatePresence>
 
-            {/* Company Directory Modal */}
+            {/* Business Directory Modal (Revamped) */}
             <AnimatePresence>
                 {isDirectoryModalOpen && (
                     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
@@ -293,36 +298,77 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentPage, onToggleSearch
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setIsDirectoryModalOpen(false)}
-                            className="absolute inset-0 bg-black/60 backdrop-blur-md"
+                            className="absolute inset-0 bg-dark-bg/80 backdrop-blur-md"
                         />
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                            initial={{ opacity: 0, scale: 0.9, y: 30 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                            className="relative bg-[#0F172A] border border-glass-border p-8 rounded-2xl shadow-2xl max-w-md w-full text-center z-10 overflow-hidden"
+                            exit={{ opacity: 0, scale: 0.9, y: 30 }}
+                            className="relative bg-[#0F172A] border border-glass-border p-1 overflow-hidden rounded-3xl shadow-2xl max-w-lg w-full z-10"
                         >
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
-                            <div className="absolute bottom-0 left-0 w-24 h-24 bg-secondary/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
-                            
-                            <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-primary/20 rotate-3">
-                                <i className="fas fa-folder-open text-white text-2xl"></i>
-                            </div>
-                            
-                            <h3 className="text-2xl font-bold text-white mb-3">Coming Soon</h3>
-                            <div className="w-12 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-6"></div>
-                            
-                            <p className="text-gray-300 mb-8 leading-relaxed">
-                                We are building a comprehensive <strong>Company Directory</strong> that will allow you to directly access services offered by our sponsor companies—all from one place.
-                            </p>
-                            
-                            <Magnetic>
+                            {/* Decorative Background Elements */}
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+                            <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+
+                            <div className="bg-dark-bg/60 backdrop-blur-xl rounded-[22px] p-8 sm:p-10 relative overflow-hidden">
+                                {/* Close Button */}
                                 <button 
                                     onClick={() => setIsDirectoryModalOpen(false)}
-                                    className="px-8 py-3 bg-gradient-to-r from-primary to-primary-dark text-white font-bold rounded-xl shadow-lg hover:shadow-primary/30 transition-all transform hover:scale-105"
+                                    className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 transition-colors z-20"
                                 >
-                                    Got It
+                                    <i className="fas fa-times"></i>
                                 </button>
-                            </Magnetic>
+
+                                <div className="flex flex-col items-center text-center">
+                                    {/* Animated Icon */}
+                                    <div className="relative w-20 h-20 mb-6">
+                                        <motion.div 
+                                            animate={{ rotate: 360 }}
+                                            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                                            className="absolute inset-0 rounded-full border-2 border-dashed border-primary/30"
+                                        />
+                                        <motion.div 
+                                            animate={{ rotate: -360 }}
+                                            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                                            className="absolute inset-2 rounded-full border-2 border-dashed border-secondary/30"
+                                        />
+                                        <div className="absolute inset-0 flex items-center justify-center">
+                                            <i className="fas fa-network-wired text-3xl text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary"></i>
+                                        </div>
+                                    </div>
+
+                                    <motion.h3 
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.1 }}
+                                        className="text-3xl font-bold text-white mb-3"
+                                    >
+                                        Building the Hub
+                                    </motion.h3>
+                                    
+                                    <motion.p 
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.2 }}
+                                        className="text-gray-300 mb-8 leading-relaxed"
+                                    >
+                                        We are curating an exclusive directory of New Zealand's most trusted businesses. A place to connect, collaborate, and grow together.
+                                    </motion.p>
+
+                                    <motion.div 
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.3 }}
+                                        className="w-full"
+                                    >
+                                        <div className="px-6 py-4 bg-white/5 border border-glass-border rounded-xl">
+                                             <p className="text-sm text-gray-400">
+                                                Expected Launch: <span className="text-secondary font-bold">Late 2025</span>
+                                            </p>
+                                        </div>
+                                    </motion.div>
+                                </div>
+                            </div>
                         </motion.div>
                     </div>
                 )}

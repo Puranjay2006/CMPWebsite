@@ -113,7 +113,7 @@ const Hero: React.FC<{onNavigate: HomePageProps['onNavigate']}> = ({ onNavigate 
                     </div>
                 </div>
             </div>
-            <div className="absolute -bottom-6 left-0 w-full text-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-[-10px] group-hover:translate-y-0 pointer-events-none">
+            <div className="absolute -bottom-9 left-0 w-full text-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-[-10px] group-hover:translate-y-0 pointer-events-none">
                 <span className="text-xs sm:text-sm font-bold tracking-[0.2em] text-secondary uppercase drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]">Trusted by NZ Businesses</span>
             </div>
         </div>

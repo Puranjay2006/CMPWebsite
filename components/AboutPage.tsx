@@ -206,8 +206,16 @@ const MissionVisionValues: React.FC = () => (
           </div>
         </div>
   
-        <div className="text-center mb-12">
-          <h3 className="reveal-text text-2xl md:text-3xl font-semibold text-white mb-10">Our Values</h3>
+        <div className="text-center mb-16 relative">
+            {/* Enhanced Text Animation */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-secondary/10 rounded-full blur-[80px] pointer-events-none"></div>
+            <h3 className="text-4xl md:text-5xl font-bold text-white mb-10 inline-block relative z-10 tracking-tight">
+                {Array.from("Our Values").map((char, index) => (
+                    <span key={index} className="inline-block stagger-char opacity-0 translate-y-8">
+                        {char === " " ? "\u00A0" : char}
+                    </span>
+                ))}
+            </h3>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -285,7 +293,7 @@ const AboutCTA: React.FC<{onNavigate: AboutPageProps['onNavigate']}> = ({ onNavi
             </Magnetic>
             <Magnetic>
                 <Interactive>
-                    <a href="#services" onClick={(e) => { e.preventDefault(); onNavigate('home', 'services'); }} className="w-full sm:w-auto text-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-cyan-700 text-white font-bold rounded-xl shadow-lg hover:bg-white hover:text-dark-bg transition-all duration-300 flex items-center">
+                    <a href="#services" onClick={(e) => { e.preventDefault(); onNavigate('home', 'services'); }} className="w-full sm:w-auto text-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-cyan-700 text-white font-bold rounded-xl shadow-lg hover:shadow-cyan-500/50 hover:text-white transform hover:scale-105 transition-all duration-300 flex items-center">
                         Explore Services
                     </a>
                 </Interactive>
@@ -342,6 +350,23 @@ const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
                 ease: "power3.out",
                 delay: 0.2
             });
+
+            // Specific animation for Our Values staggered text
+            const chars = gsap.utils.toArray('.stagger-char');
+            if(chars.length > 0) {
+                gsap.to(chars, {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: "back.out(1.7)",
+                    stagger: 0.05,
+                    scrollTrigger: {
+                        trigger: chars[0] as Element, // Use the first character as the trigger
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            }
 
             // Parallax Effect
             gsap.utils.toArray('.parallax-bg').forEach((bg: any) => {
