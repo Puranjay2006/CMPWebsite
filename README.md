@@ -1,6 +1,6 @@
 <div align="center">
 
-# Capital Media Partners — Website
+# Capital Media Partners Limited — Website
 
 **The official website for [Capital Media Partners Limited](https://capitalmediapartners.co.nz/)**
 
