@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services – Capital Media Partners</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Explore Capital Media Partners' comprehensive services: Digital Marketing, Insurance Advisory, Marketing & Print Media, Technology & AI, and Lead Generation. Expert solutions for New Zealand businesses.">
+  <meta name="keywords" content="business services New Zealand, digital marketing NZ, insurance advisory, technology AI, lead generation, marketing services Auckland">
+  <meta name="author" content="Capital Media Partners">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="geo.region" content="NZ">
+  <meta name="geo.placename" content="Auckland">
+  <meta name="geo.position" content="-36.8485;174.7633">
+  <meta name="ICBM" content="-36.8485, 174.7633">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Our Services – Capital Media Partners">
+  <meta property="og:description" content="Explore our comprehensive business services: Digital Marketing, Insurance Advisory, Marketing & Print Media, Technology & AI, and Lead Generation.">
+  <meta property="og:image" content="https://capitalmediapartners.co.nz/assets/images/logos/Capital-Media-Partners-Logo.png">
+  <meta property="og:image:alt" content="Capital Media Partners - Our Services">
+  <meta property="og:url" content="https://capitalmediapartners.co.nz/pages/services.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Capital Media Partners">
+  <meta property="og:locale" content="en_NZ">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@CMP2028">
+  <meta name="twitter:creator" content="@CMP2028">
+  <meta name="twitter:title" content="Our Services – Capital Media Partners">
+  <meta name="twitter:description" content="Explore our comprehensive business services for New Zealand businesses.">
+  <meta name="twitter:image" content="https://capitalmediapartners.co.nz/assets/images/logos/Capital-Media-Partners-Logo.png">
+
+  <!-- Additional SEO Meta Tags -->
+  <link rel="canonical" href="https://capitalmediapartners.co.nz/pages/services.html">
+  <meta name="theme-color" content="#523784">
+  <meta name="msapplication-TileColor" content="#523784">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/logos/Capital-Media-Partners-Logo.png">
+  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/Capital-Media-Partners-Logo.png">
+  <link rel="apple-touch-icon" href="../assets/images/logos/Capital-Media-Partners-Logo.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Our Services - Capital Media Partners",
+    "description": "Comprehensive business services for New Zealand including Digital Marketing, Insurance Advisory, Marketing & Print Media, Technology & AI, and Lead Generation.",
+    "url": "https://capitalmediapartners.co.nz/pages/services.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "Capital Media Partners",
+      "url": "https://capitalmediapartners.co.nz"
+    }
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          'xs': '480px',
+          'sm': '640px',
+          'md': '768px',
+          'lg': '1024px',
+          'xl': '1280px',
+          '2xl': '1536px',
+        },
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+
+  <!-- Component System -->
+  <script src="../assets/js/components.js?v=10"></script>
+  <!-- Cookie Consent -->
+  <script src="../assets/js/cookie-consent.js"></script>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=outfit:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+
+  <style>
+    body, .font-sans {
+      font-family: 'Outfit', sans-serif !important;
+    }
+    
+    /* Services Page Styles */
+    .services-gradient-text {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* Service Card - Premium Design */
+    .service-card {
+      background: rgba(255, 255, 255, 0.98);
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(82, 55, 132, 0.06);
+      border: 1px solid rgba(82, 55, 132, 0.08);
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Top gradient line element */
+    .service-card .service-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
+      background-size: 200% 100%;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 24px 24px 0 0;
+      z-index: 10;
+    }
+    
+    .service-card:hover .service-line {
+      transform: scaleX(1);
+      animation: shimmer-border 2s linear infinite;
+    }
+    
+    .service-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(82, 55, 132, 0.02), rgba(39, 189, 218, 0.02));
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+      border-radius: 24px;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 25px 60px rgba(82, 55, 132, 0.18);
+      border-color: rgba(82, 55, 132, 0.15);
+    }
+    
+    .service-card:hover::after {
+      opacity: 1;
+    }
+    
+    @keyframes shimmer-border {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    
+    /* Service Icon - Floating Animation */
+    .service-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      color: white;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      box-shadow: 0 8px 25px rgba(82, 55, 132, 0.35);
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+      flex-shrink: 0;
+      position: relative;
+    }
+    
+    .service-icon::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      opacity: 0;
+      filter: blur(12px);
+      transition: opacity 0.5s ease;
+      z-index: -1;
+    }
+    
+    .service-card:hover .service-icon {
+      transform: translateY(-8px) rotate(5deg) scale(1.1);
+      box-shadow: 0 15px 40px rgba(82, 55, 132, 0.4);
+    }
+    
+    .service-card:hover .service-icon::after {
+      opacity: 0.5;
+    }
+    
+    /* Service CTA Button */
+    .service-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.75rem;
+      border: 2px solid var(--primary-color);
+      color: var(--primary-color);
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: 14px;
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      margin-top: auto;
+      text-decoration: none;
+      position: relative;
+      z-index: 2;
+      overflow: hidden;
+    }
+    
+    .service-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      transform: translateX(-100%);
+      transition: transform 0.4s ease;
+      z-index: -1;
+    }
+    
+    .service-cta:hover {
+      border-color: transparent;
+      color: white;
+      box-shadow: 0 10px 25px rgba(82, 55, 132, 0.35);
+      transform: translateY(-2px);
+    }
+    
+    .service-cta:hover::before {
+      transform: translateX(0);
+    }
+    
+    .service-cta i {
+      transition: transform 0.4s ease;
+    }
+    
+    .service-cta:hover i {
+      transform: translateX(6px);
+    }
+    
+    /* Clickable Card Link */
+    .card-link {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+    
+    /* Stats Card - Animated */
+    .stats-item {
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+    }
+    
+    .stats-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+    
+    /* Why Choose Us Card - Enhanced */
+    .why-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(82, 55, 132, 0.06);
+      border: 1px solid rgba(82, 55, 132, 0.08);
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    
+    .why-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(82, 55, 132, 0.12);
+      border-color: rgba(82, 55, 132, 0.15);
+    }
+    
+    .why-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      color: white;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      transition: all 0.4s ease;
+    }
+    
+    .why-card:hover .why-icon {
+      transform: scale(1.1) rotate(-5deg);
+      box-shadow: 0 8px 20px rgba(82, 55, 132, 0.3);
+    }
+    
+    /* Hero Visual Cards Animation */
+    .hero-visual-card {
+      animation: float-card 6s ease-in-out infinite;
+    }
+    
+    .hero-visual-card:nth-child(2) { animation-delay: -1.5s; }
+    .hero-visual-card:nth-child(3) { animation-delay: -3s; }
+    .hero-visual-card:nth-child(4) { animation-delay: -4.5s; }
+    
+    @keyframes float-card {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-10px) scale(1.02); }
+    }
+    
+    /* Stagger animation for cards */
+    .service-card:nth-child(1) { animation-delay: 0s; }
+    .service-card:nth-child(2) { animation-delay: 0.1s; }
+    .service-card:nth-child(3) { animation-delay: 0.2s; }
+    .service-card:nth-child(4) { animation-delay: 0.3s; }
+    .service-card:nth-child(5) { animation-delay: 0.4s; }
+    .service-card:nth-child(6) { animation-delay: 0.5s; }
+    
+    /* Animated background gradient */
+    .services-hero-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 20% 20%, rgba(82, 55, 132, 0.05) 0%, transparent 50%),
+                  radial-gradient(ellipse at 80% 80%, rgba(39, 189, 218, 0.05) 0%, transparent 50%);
+      animation: pulse-bg 8s ease-in-out infinite;
+    }
+    
+    @keyframes pulse-bg {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+    
+    /* Grid pattern overlay */
+    .grid-pattern {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(82, 55, 132, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-white">
+  <!-- Skip to Main Content Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Page Loading Indicator -->
+  <div id="page-loader" class="page-loader" aria-hidden="true">
+    <div class="loader-spinner"></div>
+  </div>
+  
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+  
+  <!-- Subtle Flowing Gradient Background -->
+  <div class="flowing-gradient-bg" aria-hidden="true"></div>
+  
+  <!-- Main Content -->
+  <main id="main-content">
+  
+  <!-- Navbar Component Placeholder -->
+
+  <!-- ======================= -->
+  <!-- HERO SECTION -->
+  <!-- ======================= -->
+  <section class="relative pt-20 sm:pt-24 lg:pt-28 pb-6 sm:pb-8 bg-white text-gray-800 overflow-hidden">
+    <!-- Animated Background -->
+    <div class="services-hero-bg"></div>
+    <div class="grid-pattern"></div>
+    
+    <div class="container mx-auto py-4 sm:py-6 lg:py-8 px-4 sm:px-6 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+        <!-- Text Content -->
+        <div class="fade-in text-center lg:text-left">
+          <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[rgba(82,55,132,0.08)] to-[rgba(1,172,237,0.08)] rounded-full mb-4 border border-[rgba(82,55,132,0.12)] hover:border-[rgba(82,55,132,0.25)] transition-all duration-300 group cursor-default">
+            <span class="w-2 h-2 bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] rounded-full mr-2.5 animate-pulse"></span>
+            <span class="text-xs sm:text-sm font-semibold bg-gradient-to-r from-[var(--primary-color)] to-[var(--secondary-color)] bg-clip-text text-transparent">Comprehensive Business Solutions</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-4 leading-[1.1] tracking-tight">
+            Solutions That
+            <span class="bg-gradient-to-r from-[var(--primary-color)] via-[#7c5cbf] to-[var(--secondary-color)] bg-clip-text text-transparent">
+              Drive
+            </span>
+            <br class="hidden sm:block">Business
+            <span class="bg-gradient-to-r from-[var(--secondary-color)] via-[#5ba3b8] to-[var(--primary-color)] bg-clip-text text-transparent">
+              Growth
+            </span>
+          </h1>
+
+          <p class="text-sm sm:text-base lg:text-lg mb-5 text-gray-600 leading-relaxed max-w-none lg:max-w-md">
+            From digital marketing to AI technology, we offer end-to-end services designed to help New Zealand businesses scale, innovate, and succeed.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-3 mb-6 lg:mb-0 justify-center lg:justify-start">
+            <a href="#services" class="cta-btn-primary text-center">
+              <span>Explore Services</span>
+              <i class="fas fa-arrow-down"></i>
+            </a>
+            <button onclick="openBookingModal()" class="cta-btn-outline text-center">
+              <i class="fas fa-calendar-check"></i>
+              <span>Book a Free Strategy Call</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Visual Content - Improved -->
+        <div class="flex justify-center lg:justify-end mt-4 lg:mt-0">
+          <div class="relative">
+            <!-- Services Visual Grid -->
+            <div class="grid grid-cols-2 gap-3 sm:gap-4 max-w-sm lg:max-w-md">
+              <a href="services/digital-marketing.html" class="hero-visual-card bg-gradient-to-br from-[var(--primary-color)] to-[#6b4aa0] rounded-2xl p-4 sm:p-5 text-white shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer group no-underline">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:bg-white/30 transition-all duration-300">
+                  <i class="fas fa-chart-line text-lg sm:text-xl"></i>
+                </div>
+                <h3 class="font-bold text-sm sm:text-base">Digital Marketing</h3>
+                <p class="text-xs text-white/75 mt-1">Data-driven campaigns</p>
+              </a>
+              <a href="services/marketing-print-media.html" class="hero-visual-card bg-gradient-to-br from-[var(--secondary-color)] to-[#1a9cb8] rounded-2xl p-4 sm:p-5 text-white shadow-xl hover:shadow-2xl transition-all duration-500 mt-6 cursor-pointer group no-underline">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:bg-white/30 transition-all duration-300">
+                  <i class="fas fa-print text-lg sm:text-xl"></i>
+                </div>
+                <h3 class="font-bold text-sm sm:text-base">Marketing & Print</h3>
+                <p class="text-xs text-white/75 mt-1">Campaigns & branding</p>
+              </a>
+              <a href="services/technology-ai.html" class="hero-visual-card bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl p-4 sm:p-5 text-white shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer group no-underline">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:bg-white/30 transition-all duration-300">
+                  <i class="fas fa-microchip text-lg sm:text-xl"></i>
+                </div>
+                <h3 class="font-bold text-sm sm:text-base">Technology & AI</h3>
+                <p class="text-xs text-white/75 mt-1">Smart automation</p>
+              </a>
+              <a href="services/insurance-advisory.html" class="hero-visual-card bg-gradient-to-br from-orange-500 to-pink-500 rounded-2xl p-4 sm:p-5 text-white shadow-xl hover:shadow-2xl transition-all duration-500 mt-6 cursor-pointer group no-underline">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:bg-white/30 transition-all duration-300">
+                  <i class="fas fa-shield-alt text-lg sm:text-xl"></i>
+                </div>
+                <h3 class="font-bold text-sm sm:text-base">Insurance Advisory</h3>
+                <p class="text-xs text-white/75 mt-1">Protection plans</p>
+              </a>
+            </div>
+            <!-- Decorative Elements -->
+            <div class="absolute -z-10 -top-6 -right-6 w-28 h-28 bg-gradient-to-br from-[var(--primary-color)]/15 to-[var(--secondary-color)]/15 rounded-full blur-2xl animate-pulse"></div>
+            <div class="absolute -z-10 -bottom-6 -left-6 w-20 h-20 bg-gradient-to-br from-[var(--secondary-color)]/15 to-[var(--primary-color)]/15 rounded-full blur-2xl animate-pulse" style="animation-delay: -2s;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= -->
+  <!-- SERVICES GRID -->
+  <!-- ======================= -->
+  <section id="services" class="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-gray-50/80 to-white section-separator">
+    <div class="container mx-auto px-4 sm:px-6">
+      <!-- Section Header -->
+      <div class="text-center mb-10 sm:mb-12 fade-in">
+        <div class="inline-flex items-center px-4 py-2 bg-[rgba(82,55,132,0.06)] rounded-full border border-[rgba(82,55,132,0.1)] mb-4">
+          <span class="w-2 h-2 bg-[var(--primary-color)] rounded-full mr-2.5 animate-pulse"></span>
+          <span class="text-xs sm:text-sm font-semibold tracking-wider uppercase text-[var(--primary-color)]">What We Offer</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+          Our <span class="services-gradient-text">Services</span>
+        </h2>
+        <p class="text-sm sm:text-base text-gray-600 max-w-xl mx-auto">
+          Comprehensive solutions tailored to your business needs.
+        </p>
+      </div>
+      
+      <!-- Services Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto">
+        
+        <!-- Service 1: Digital Marketing -->
+        <div class="service-card fade-in">
+          <div class="service-line"></div>
+          <a href="services/digital-marketing.html" class="card-link" aria-label="View Digital Marketing service"></a>
+          <div class="service-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Digital Marketing & CRM</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5 flex-grow">
+            Drive growth with data-driven digital campaigns, CRM integrations, marketing automation, and conversion optimization strategies.
+          </p>
+          <a href="services/digital-marketing.html" class="service-cta">
+            <span>Learn More</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        
+        <!-- Service 2: Technology & AI -->
+        <div class="service-card fade-in">
+          <div class="service-line"></div>
+          <a href="services/technology-ai.html" class="card-link" aria-label="View Technology & AI service"></a>
+          <div class="service-icon">
+            <i class="fas fa-microchip"></i>
+          </div>
+          <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Technology & AI</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5 flex-grow">
+            Transform your business with cutting-edge AI solutions, intelligent automation, and digital transformation services.
+          </p>
+          <a href="services/technology-ai.html" class="service-cta">
+            <span>Learn More</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        
+        <!-- Service 3: Insurance Advisory -->
+        <div class="service-card fade-in">
+          <div class="service-line"></div>
+          <a href="services/insurance-advisory.html" class="card-link" aria-label="View Insurance Advisory service"></a>
+          <div class="service-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Insurance Advisory</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5 flex-grow">
+            Tailored protection plans, comprehensive risk management, and policy optimization for businesses and individuals.
+          </p>
+          <a href="services/insurance-advisory.html" class="service-cta">
+            <span>Learn More</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        
+        <!-- Service 4: Marketing & Print Media -->
+        <div class="service-card fade-in">
+          <div class="service-line"></div>
+          <a href="services/marketing-print-media.html" class="card-link" aria-label="View Marketing & Print Media service"></a>
+          <div class="service-icon">
+            <i class="fas fa-bullhorn"></i>
+          </div>
+          <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Marketing & Print Media</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5 flex-grow">
+            Amplify your brand with strategic campaigns, creative design, and targeted media placements across New Zealand.
+          </p>
+          <a href="services/marketing-print-media.html" class="service-cta">
+            <span>Learn More</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        
+        <!-- Service 5: Lead Generation -->
+        <div class="service-card fade-in">
+          <div class="service-line"></div>
+          <a href="leads.html" class="card-link" aria-label="View Lead Generation service"></a>
+          <div class="service-icon">
+            <i class="fas fa-user-plus"></i>
+          </div>
+          <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Lead Generation</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5 flex-grow">
+            Get qualified leads with AI-powered prospecting, automated outreach, and intelligent qualification that fills your pipeline.
+          </p>
+          <a href="leads.html" class="service-cta">
+            <span>Learn More</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= -->
+  <!-- WHY CHOOSE US -->
+  <!-- ======================= -->
+  <section class="py-12 sm:py-16 lg:py-20 bg-white section-separator">
+    <div class="container mx-auto px-4 sm:px-6">
+      <!-- Section Header -->
+      <div class="text-center mb-10 sm:mb-12 fade-in">
+        <div class="inline-flex items-center px-4 py-2 bg-[rgba(82,55,132,0.06)] rounded-full border border-[rgba(82,55,132,0.1)] mb-4">
+          <span class="w-2 h-2 bg-[var(--primary-color)] rounded-full mr-2.5 animate-pulse"></span>
+          <span class="text-xs sm:text-sm font-semibold tracking-wider uppercase text-[var(--primary-color)]">Why Capital Media Partners</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+          Why <span class="services-gradient-text">Choose Us</span>
+        </h2>
+        <p class="text-sm sm:text-base text-gray-600 max-w-xl mx-auto">
+          We're not just service providers—we're your strategic partners in growth.
+        </p>
+      </div>
+      
+      <!-- Why Cards Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto">
+        <div class="why-card fade-in text-center group">
+          <div class="why-icon mx-auto">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-2 group-hover:text-[var(--primary-color)] transition-colors">100% NZ Based</h3>
+          <p class="text-gray-600 text-xs sm:text-sm">Local expertise with a deep understanding of the New Zealand market.</p>
+        </div>
+        
+        <div class="why-card fade-in text-center group">
+          <div class="why-icon mx-auto">
+            <i class="fas fa-puzzle-piece"></i>
+          </div>
+          <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-2 group-hover:text-[var(--primary-color)] transition-colors">Tailored Solutions</h3>
+          <p class="text-gray-600 text-xs sm:text-sm">Custom strategies designed specifically for your unique business needs.</p>
+        </div>
+        
+        <div class="why-card fade-in text-center group">
+          <div class="why-icon mx-auto">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-2 group-hover:text-[var(--primary-color)] transition-colors">Results Focused</h3>
+          <p class="text-gray-600 text-xs sm:text-sm">We measure success by your growth, not vanity metrics.</p>
+        </div>
+        
+        <div class="why-card fade-in text-center group">
+          <div class="why-icon mx-auto">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-2 group-hover:text-[var(--primary-color)] transition-colors">No Lock-in Contracts</h3>
+          <p class="text-gray-600 text-xs sm:text-sm">Flexible partnerships built on trust and delivering value.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= -->
+  <!-- CTA SECTION -->
+  <!-- ======================= -->
+  <section class="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-[var(--primary-color)] via-[#6b4aa0] to-[var(--secondary-color)] relative overflow-hidden">
+    <!-- Background Decorations -->
+    <div class="absolute top-0 left-0 w-72 h-72 bg-white/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05)_0%,transparent_70%)]"></div>
+    
+    <div class="container mx-auto px-4 sm:px-6 relative z-10">
+      <div class="max-w-3xl mx-auto text-center fade-in">
+        <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur rounded-full mb-5">
+          <i class="fas fa-rocket text-white text-sm mr-2"></i>
+          <span class="text-xs sm:text-sm font-semibold text-white">Ready to Transform Your Business?</span>
+        </div>
+        
+        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+          Let's Build Something <br class="hidden sm:block">Amazing Together
+        </h2>
+        
+        <p class="text-sm sm:text-base lg:text-lg text-white/85 mb-8 max-w-xl mx-auto leading-relaxed">
+          Whether you need one service or a full business transformation, we're here to help. 
+          Schedule a free consultation and discover how we can accelerate your growth.
+        </p>
+        
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-3 justify-center mb-8">
+          <a href="contact.html" class="group inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white text-[var(--primary-color)] rounded-xl font-bold text-sm shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300">
+            <i class="fas fa-envelope group-hover:scale-110 transition-transform"></i>
+            <span>Contact Us</span>
+          </a>
+          <button onclick="openBookingModal()" class="group inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/10 backdrop-blur border-2 border-white/50 text-white rounded-xl font-bold text-sm hover:bg-white hover:text-[var(--primary-color)] hover:border-white transition-all duration-300">
+            <i class="fas fa-calendar-check group-hover:scale-110 transition-transform"></i>
+            <span>Book a Free Strategy Call</span>
+          </button>
+        </div>
+        
+        <!-- Trust Elements -->
+        <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-white/80 text-xs sm:text-sm">
+          <div class="flex items-center gap-1.5">
+            <i class="fas fa-check-circle text-emerald-400"></i>
+            <span>Free Consultation</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <i class="fas fa-check-circle text-emerald-400"></i>
+            <span>Custom Solutions</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <i class="fas fa-check-circle text-emerald-400"></i>
+            <span>No Obligation</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <i class="fas fa-check-circle text-emerald-400"></i>
+            <span>NZ Based Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Component Placeholder -->
+  <div id="footer-placeholder"></div>
+  
+  </main>
+
+  <!-- Global Booking Modal -->
+  <script src="../assets/js/booking-modal.js"></script>
+
+  <script>
+    // Load Header and Footer Components
+    document.addEventListener('DOMContentLoaded', function() {
+      // Check if createHeader and createDetailedFooter functions are available
+      if (typeof createHeader === 'function') {
+        const navbar = document.querySelector('#main-content');
+        if (navbar) {
+          navbar.insertAdjacentHTML('afterbegin', createHeader('services'));
+          initMobileMenu();
+        }
+      }
+      
+      if (typeof createDetailedFooter === 'function') {
+        const footerPlaceholder = document.getElementById('footer-placeholder');
+        if (footerPlaceholder) {
+          footerPlaceholder.innerHTML = createDetailedFooter('services');
+        }
+      }
+    });
+    
+    // Initialize mobile menu functionality
+    function initMobileMenu() {
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileServicesBtn = document.getElementById('mobile-services-btn');
+      const mobileServicesMenu = document.getElementById('mobile-services-menu');
+      const mobileServicesIcon = document.getElementById('mobile-services-icon');
+      
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+          const icon = menuBtn.querySelector('i');
+          if (icon) {
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+          }
+        });
+      }
+      
+      if (mobileServicesBtn && mobileServicesMenu && mobileServicesIcon) {
+        mobileServicesBtn.addEventListener('click', function() {
+          mobileServicesMenu.classList.toggle('hidden');
+          mobileServicesIcon.classList.toggle('rotate-180');
+        });
+      }
+    }
+
+  </script>
+
+  <script>
+    // Scroll Progress Indicator
+    window.addEventListener('scroll', function() {
+      const scrollProgress = document.getElementById('scroll-progress');
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      if (scrollProgress) {
+        scrollProgress.style.width = scrollPercent + '%';
+      }
+    });
+    
+    // Fade-in animation on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { 
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+      
+      fadeElements.forEach((el, index) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.4s ease-out, transform 0.4s ease-out';
+        // Add staggered delay for cards
+        if (el.classList.contains('service-card') || el.classList.contains('why-card')) {
+          el.style.transitionDelay = (index * 0.05) + 's';
+        }
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>

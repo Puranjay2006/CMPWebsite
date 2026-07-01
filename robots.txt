@@ -1,0 +1,18 @@
+# Capital Media Partners - robots.txt
+# Last updated: 2026-01-02
+
+User-agent: *
+Allow: /
+
+# Disallow sensitive directories
+Disallow: /other/
+Disallow: /*.pdf$
+
+# Allow all images
+Allow: /assets/images/
+
+# Crawl delay for polite crawling
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://capitalmediapartners.co.nz/sitemap.xml

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversion Stage: CRM Tracking & Analytics – Capital Media Partners</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Convert qualified leads into customers with CRM tracking, analytics, and feedback loops. Close the marketing-sales gap with data-driven insights.">
+  <meta name="keywords" content="CRM tracking NZ, conversion optimization, marketing analytics, sales pipeline, lead conversion, marketing ROI">
+  <meta name="author" content="Capital Media Partners">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Conversion Stage: CRM & Analytics – Capital Media Partners">
+  <meta property="og:description" content="Convert qualified leads with CRM tracking, analytics, and closed-loop reporting.">
+  <meta property="og:url" content="https://capitalmediapartners.co.nz/pages/services/digital-marketing/conversion.html">
+  <meta property="og:type" content="website">
+
+  <link rel="canonical" href="https://capitalmediapartners.co.nz/pages/services/digital-marketing/conversion.html">
+  <meta name="theme-color" content="#543CF8">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../../../assets/images/logos/Capital-Media-Partners-Logo.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../../assets/css/styles.css">
+
+  <!-- Component System -->
+  <script src="../../../assets/js/components.js?v=10"></script>
+  <script src="../../../assets/js/cookie-consent.js"></script>
+  <!-- Easter Egg Fun -->
+  <script src="../../../assets/js/easter-egg.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=outfit:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+  
+  <style>
+    body, .font-sans { font-family: 'Outfit', sans-serif !important; }
+    
+    /* Premium Design System - Lighter Fresh Green */
+    :root {
+      --stage-primary: #34d399;
+      --stage-secondary: #10b981;
+      --stage-accent: #059669;
+    }
+    
+    .stage-gradient { background: linear-gradient(135deg, #34d399 0%, #10b981 50%, #059669 100%); }
+    .stage-gradient-text {
+      background: linear-gradient(135deg, #10b981, #059669);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .funnel-nav {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .funnel-nav-item {
+      padding: 0.6rem 1.25rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      text-decoration: none;
+      border: 3px solid transparent;
+    }
+    
+    .funnel-nav-item.active {
+      background: linear-gradient(135deg, #34d399, #10b981);
+      color: white;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 20px rgba(52, 211, 153, 0.4), 0 0 0 3px rgba(52, 211, 153, 0.15);
+      border: 3px solid #523784;
+      outline: none;
+      transform: scale(1.02);
+    }
+    
+    .funnel-nav-item:not(.active) {
+      background: rgba(255, 255, 255, 0.9);
+      color: #64748b;
+      backdrop-filter: blur(10px);
+    }
+    
+    .funnel-nav-item:not(.active):hover {
+      background: rgba(255, 255, 255, 1);
+      color: #10b981;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(52, 211, 153, 0.25);
+    }
+    
+    .key-point-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.75rem;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(52, 211, 153, 0.15);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .key-point-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #34d399, #10b981);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+    
+    .key-point-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(52, 211, 153, 0.2);
+    }
+    
+    .key-point-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .tip-box {
+      background: linear-gradient(135deg, rgba(52, 211, 153, 0.1), rgba(16, 185, 129, 0.1));
+      border-left: 4px solid #34d399;
+      border-radius: 0 16px 16px 0;
+      padding: 1.75rem;
+      position: relative;
+    }
+    
+    .tip-box::before {
+      content: '💡';
+      position: absolute;
+      top: -12px;
+      left: 12px;
+      font-size: 1.5rem;
+    }
+    
+    .channel-card {
+      background: white;
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(52, 211, 153, 0.12);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .channel-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(52, 211, 153, 0.05) 0%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    
+    .channel-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(52, 211, 153, 0.2);
+    }
+    
+    .channel-card:hover::after {
+      opacity: 1;
+    }
+    
+    .feedback-loop {
+      position: relative;
+    }
+    
+    .loop-arrow {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    
+    .crm-partner-card {
+      background: linear-gradient(135deg, rgba(52, 211, 153, 0.08), rgba(16, 185, 129, 0.08));
+      border: 2px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+    }
+    
+    .crm-partner-card::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      background: linear-gradient(135deg, #34d399, #10b981);
+      border-radius: 22px;
+      z-index: -1;
+    }
+    
+    .metric-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.05);
+      border: 1px solid #e5e7eb;
+      transition: all 0.4s ease;
+    }
+    
+    .metric-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 35px rgba(52, 211, 153, 0.2);
+    }
+    
+    .metric-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #34d399, #10b981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* Back Button Premium Style */
+    .back-btn {
+      position: absolute;
+      top: 24px;
+      left: 16px;
+      z-index: 20;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 50px;
+      color: #475569;
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(52, 211, 153, 0.15);
+    }
+    
+    .back-btn:hover {
+      background: linear-gradient(135deg, #34d399, #10b981);
+      color: white;
+      transform: translateX(-4px);
+      box-shadow: 0 8px 30px rgba(52, 211, 153, 0.4);
+    }
+    
+    .back-btn:hover i {
+      transform: translateX(-3px);
+    }
+    
+    .back-btn i {
+      transition: transform 0.3s ease;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+  <!-- Skip to Main Content Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Page Loading Indicator -->
+  <div id="page-loader" class="page-loader" aria-hidden="true">
+    <div class="loader-spinner"></div>
+  </div>
+  
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+  <div class="flowing-gradient-bg" aria-hidden="true"></div>
+
+  <!-- Header Component -->
+  <div data-component="header" data-base-path="../../.."></div>
+  
+  <!-- Main Content -->
+  <main id="main-content">
+
+  <!-- Hero Section -->
+  <section class="relative pt-20 sm:pt-24 lg:pt-28 overflow-hidden">
+    <!-- Back Button -->
+    <a href="../digital-marketing.html" class="back-btn">
+      <i class="fas fa-arrow-left"></i>
+      <span>Back to Overview</span>
+    </a>
+    
+    <div class="stage-gradient py-16 sm:py-24">
+      <div class="container mx-auto px-4 sm:px-6">
+        <!-- Funnel Navigation -->
+        <div class="funnel-nav mb-8">
+          <a href="awareness.html" class="funnel-nav-item">Awareness</a>
+          <a href="interest.html" class="funnel-nav-item">Interest</a>
+          <a href="consideration.html" class="funnel-nav-item">Consideration</a>
+          <a href="conversion.html" class="funnel-nav-item active">Conversion</a>
+        </div>
+        
+        <div class="max-w-4xl mx-auto text-center text-white">
+          <div class="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur rounded-full mb-6">
+            <span class="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></span>
+            <span class="text-sm font-medium">Funnel Stage 4 of 4 — Final Stage</span>
+          </div>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+            <i class="fas fa-trophy mr-4 opacity-80"></i>Conversion
+          </h1>
+          <p class="text-xl sm:text-2xl opacity-90 mb-4">CRM Tracking & Analytics</p>
+          <p class="text-lg opacity-80 max-w-2xl mx-auto">
+            The ultimate destination where qualified leads become customers. Track every conversion, analyze what's working, and feed insights back to improve the entire funnel.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview Section -->
+  <section class="section-separator bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center px-4 py-2 bg-emerald-50 rounded-full mb-6">
+            <span class="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
+            <span class="text-sm font-medium text-emerald-700">Stage Overview</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+            Close the Loop with <span class="stage-gradient-text">Data</span>
+          </h2>
+          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+            At the conversion stage, marketing and sales alignment is critical. We track every lead from first touch to final sale, then feed that intelligence back into the funnel to continuously improve performance.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            This closed-loop approach means you'll know exactly which campaigns, channels, and messages drive real revenue—not just clicks and impressions.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-4">
+          <div class="key-point-card text-center">
+            <div class="w-14 h-14 bg-gradient-to-br from-[#34d399] to-[#10b981] rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-database text-white text-xl"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">CRM Setup</h3>
+            <p class="text-sm text-gray-600">Tracking configured for full visibility</p>
+          </div>
+          
+          <div class="key-point-card text-center">
+            <div class="w-14 h-14 bg-gradient-to-br from-[#10b981] to-[#34d399] rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-chart-pie text-white text-xl"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Analytics</h3>
+            <p class="text-sm text-gray-600">Dashboards showing what matters</p>
+          </div>
+          
+          <div class="key-point-card text-center">
+            <div class="w-14 h-14 bg-gradient-to-br from-[#34d399] to-[#059669] rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-rotate text-white text-xl"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Feedback Loop</h3>
+            <p class="text-sm text-gray-600">Conversion data improves campaigns</p>
+          </div>
+          
+          <div class="key-point-card text-center">
+            <div class="w-14 h-14 bg-gradient-to-br from-[#059669] to-[#34d399] rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-sack-dollar text-white text-xl"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">ROI Tracking</h3>
+            <p class="text-sm text-gray-600">Know your true cost per acquisition</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRM Integration Section -->
+  <section class="section-separator bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <i class="fas fa-link text-[#34d399] mr-3"></i>CRM Partner Approach
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Rather than operating in silos, we function as an extension of your team with direct CRM access.
+        </p>
+      </div>
+      
+      <div class="crm-partner-card rounded-3xl bg-white p-8 md:p-12">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">What "CRM Partner" Means</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <div class="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i class="fas fa-key text-emerald-600 text-sm"></i>
+                </div>
+                <div>
+                  <span class="font-semibold text-gray-900">Direct Access</span>
+                  <p class="text-sm text-gray-600">We work within your CRM, not from reports</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i class="fas fa-clock text-emerald-600 text-sm"></i>
+                </div>
+                <div>
+                  <span class="font-semibold text-gray-900">Real-Time Data</span>
+                  <p class="text-sm text-gray-600">Optimize campaigns based on live sales data</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i class="fas fa-handshake text-emerald-600 text-sm"></i>
+                </div>
+                <div>
+                  <span class="font-semibold text-gray-900">Aligned Goals</span>
+                  <p class="text-sm text-gray-600">We succeed when you close deals, not just generate leads</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-32 h-32 bg-gradient-to-br from-[#10b981] to-[#047857] rounded-full mb-6">
+              <i class="fas fa-users-cog text-white text-4xl"></i>
+            </div>
+            <p class="text-gray-600 text-lg">
+              Working <strong>with</strong> your sales team, not as a separate vendor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Analytics & Reporting -->
+  <section class="section-separator bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <i class="fas fa-chart-line text-[#34d399] mr-3"></i>Analytics & Reporting
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Dashboards and reports that connect marketing activities to revenue outcomes.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="channel-card">
+          <div class="w-14 h-14 bg-gradient-to-br from-[#10b981] to-[#059669] rounded-2xl flex items-center justify-center mb-4">
+            <i class="fas fa-gauge-high text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Real-Time Dashboards</h3>
+          <p class="text-gray-600 mb-4">Live visibility into pipeline, conversions, and campaign performance all in one place.</p>
+          <ul class="text-sm text-gray-500 space-y-2">
+            <li><i class="fas fa-check text-emerald-500 mr-2"></i>Pipeline value by source</li>
+            <li><i class="fas fa-check text-emerald-500 mr-2"></i>Conversion rates by stage</li>
+            <li><i class="fas fa-check text-emerald-500 mr-2"></i>Lead velocity tracking</li>
+          </ul>
+        </div>
+        
+        <div class="channel-card">
+          <div class="w-14 h-14 bg-gradient-to-br from-[#059669] to-[#10b981] rounded-2xl flex items-center justify-center mb-4">
+            <i class="fas fa-route text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Attribution Modeling</h3>
+          <p class="text-gray-600 mb-4">Understand which touchpoints contribute to conversions across the full customer journey.</p>
+          <ul class="text-sm text-gray-500 space-y-2">
+            <li><i class="fas fa-check text-emerald-500 mr-2"></i>First-touch attribution</li>
+            <li><i class="fas fa-check text-emerald-500 mr-2"></i>Last-touch attribution</li>
+            <li><i class="fas fa-check text-emerald-500 mr-2"></i>Multi-touch analysis</li>
+          </ul>
+        </div>
+        
+        <div class="channel-card">
+          <div class="w-14 h-14 bg-gradient-to-br from-[#10b981] to-[#047857] rounded-2xl flex items-center justify-center mb-4">
+            <i class="fas fa-file-invoice-dollar text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">ROI Reporting</h3>
+          <p class="text-gray-600 mb-4">Know exactly how much revenue your marketing investment generates.</p>
+          <ul class="text-sm text-gray-500 space-y-2">
+            <li><i class="fas fa-check text-emerald-500 mr-2"></i>Cost per acquisition</li>
+            <li><i class="fas fa-check text-emerald-500 mr-2"></i>Return on ad spend</li>
+            <li><i class="fas fa-check text-emerald-500 mr-2"></i>Customer lifetime value</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feedback Loop Visualization -->
+  <section class="section-separator bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">The Closed-Loop System</h2>
+        <p class="text-lg text-gray-600">Conversion data flows back to improve every stage</p>
+      </div>
+      
+      <div class="bg-white rounded-3xl p-8 shadow-lg">
+        <div class="flex flex-wrap justify-center items-center gap-4 md:gap-6 mb-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-[#6366f1] to-[#8b5cf6] rounded-full flex items-center justify-center mx-auto mb-2">
+              <i class="fas fa-bullhorn text-white text-xl"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700">Awareness</span>
+          </div>
+          
+          <i class="fas fa-arrow-right text-gray-300 text-xl"></i>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-[#8b5cf6] to-[#7c3aed] rounded-full flex items-center justify-center mx-auto mb-2">
+              <i class="fas fa-heart text-white text-xl"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700">Interest</span>
+          </div>
+          
+          <i class="fas fa-arrow-right text-gray-300 text-xl"></i>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-[#06b6d4] to-[#0891b2] rounded-full flex items-center justify-center mx-auto mb-2">
+              <i class="fas fa-brain text-white text-xl"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700">Consideration</span>
+          </div>
+          
+          <i class="fas fa-arrow-right text-gray-300 text-xl"></i>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-[#10b981] to-[#059669] rounded-full flex items-center justify-center mx-auto mb-2 ring-4 ring-emerald-200">
+              <i class="fas fa-trophy text-white text-xl"></i>
+            </div>
+            <span class="text-sm font-medium text-gray-700">Conversion</span>
+          </div>
+        </div>
+        
+        <div class="flex justify-center">
+          <div class="bg-gradient-to-r from-emerald-50 to-cyan-50 rounded-xl p-6 max-w-md text-center">
+            <i class="fas fa-rotate text-[#34d399] text-3xl mb-3"></i>
+            <p class="text-gray-700">
+              <strong>Feedback Loop:</strong> Conversion data (what sold, why, to whom) feeds back to optimize targeting, messaging, and spend allocation at every stage.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Pro Tip -->
+      <div class="tip-box mt-12">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-[#10b981] rounded-xl flex items-center justify-center flex-shrink-0">
+            <i class="fas fa-lightbulb text-white text-xl"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-2">Pro Tip</h3>
+            <p class="text-gray-600">
+              Ensure that your CRM is set up so that all relevant data about the lead is visible without needing to cross-reference other systems. The goal is to see the complete lead journey in one place—from first ad click to closed deal.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Metrics -->
+  <section class="section-separator bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Key Conversion Metrics</h2>
+        <p class="text-lg text-gray-600">What we track and optimize at this final stage</p>
+      </div>
+      
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="metric-card">
+          <div class="metric-value">Win %</div>
+          <p class="text-sm text-gray-500 mt-2">Opportunity close rate</p>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">CAC</div>
+          <p class="text-sm text-gray-500 mt-2">Cost per acquisition</p>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">ROAS</div>
+          <p class="text-sm text-gray-500 mt-2">Return on ad spend</p>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">LTV</div>
+          <p class="text-sm text-gray-500 mt-2">Customer lifetime value</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="stage-gradient py-16 sm:py-20 text-white">
+    <div class="max-w-4xl mx-auto text-center px-4 sm:px-6">
+      <div class="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur rounded-full mb-6">
+        <i class="fas fa-check-circle mr-2"></i>
+        <span class="text-sm font-medium">You've seen the full funnel</span>
+      </div>
+      
+      <h2 class="text-3xl sm:text-4xl font-bold mb-6">Ready to Build Your Marketing Funnel?</h2>
+      <p class="text-lg opacity-90 mb-8">
+        Let's implement a complete digital marketing system that generates qualified leads and tracks them all the way to conversion.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="../digital-marketing.html" class="px-8 py-4 bg-white text-[#10b981] font-semibold rounded-xl hover:bg-gray-100 transition-all inline-flex items-center justify-center gap-2">
+          <i class="fas fa-arrow-left"></i>
+          Back to Digital Marketing
+        </a>
+        <a href="../digital-marketing.html#booking-modal" onclick="event.preventDefault(); window.location.href='../digital-marketing.html'; setTimeout(() => document.getElementById('booking-modal')?.classList.remove('hidden'), 500);" class="px-8 py-4 bg-[#0d9468] text-white font-semibold rounded-xl hover:bg-[#0b7d58] transition-all inline-flex items-center justify-center gap-2">
+          <i class="fas fa-calendar-check"></i>
+          Schedule Strategy Call
+        </a>
+      </div>
+      
+      <div class="mt-12 pt-8 border-t border-white/20">
+        <p class="text-sm opacity-75 mb-4">Or jump to any stage:</p>
+        <div class="funnel-nav">
+          <a href="awareness.html" class="funnel-nav-item" style="background: rgba(255,255,255,0.2); color: white;">Awareness</a>
+          <a href="interest.html" class="funnel-nav-item" style="background: rgba(255,255,255,0.2); color: white;">Interest</a>
+          <a href="consideration.html" class="funnel-nav-item" style="background: rgba(255,255,255,0.2); color: white;">Consideration</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  </main>
+
+  <!-- Footer Component -->
+  <div data-component="footer" data-base-path="../../.."></div>
+
+  <!-- Scroll to Top -->
+  <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script>
+    document.getElementById('scroll-to-top')?.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    window.addEventListener('scroll', function() {
+      const scrollBtn = document.getElementById('scroll-to-top');
+      if (scrollBtn) {
+        scrollBtn.classList.toggle('visible', window.scrollY > 400);
+      }
+    }, { passive: true });
+  </script>
+</body>
+</html>

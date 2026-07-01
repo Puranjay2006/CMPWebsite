@@ -1,0 +1,2159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lead Generation Services - Capital Media Partners</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="High-quality lead generation services for New Zealand businesses. Get qualified leads delivered to your inbox, ready to convert. Fast response times, proven results.">
+  <meta name="keywords" content="lead generation New Zealand, qualified leads NZ, business leads Auckland, sales leads, B2B leads, lead generation services">
+  <meta name="author" content="Capital Media Partners">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="geo.region" content="NZ">
+  <meta name="geo.placename" content="Auckland">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Lead Generation Services - Capital Media Partners">
+  <meta property="og:description" content="High-quality lead generation services for New Zealand businesses. Get qualified leads delivered to your inbox, ready to convert.">
+  <meta property="og:image" content="https://capitalmediapartners.co.nz/assets/images/logos/Capital-Media-Partners-Logo.png">
+  <meta property="og:url" content="https://capitalmediapartners.co.nz/pages/leads.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Capital Media Partners">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lead Generation Services - Capital Media Partners">
+  <meta name="twitter:description" content="High-quality lead generation services for New Zealand businesses. Get qualified leads ready to convert.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/logos/Capital-Media-Partners-Logo.png">
+  <link rel="shortcut icon" type="image/png" href="../assets/images/logos/Capital-Media-Partners-Logo.png">
+  <link rel="apple-touch-icon" href="../assets/images/logos/Capital-Media-Partners-Logo.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Lead Generation Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "Capital Media Partners",
+      "url": "https://capitalmediapartners.co.nz"
+    },
+    "description": "High-quality lead generation services for New Zealand businesses. Qualified leads delivered to your inbox, ready to convert.",
+    "areaServed": {
+      "@type": "Country",
+      "name": "New Zealand"
+    }
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          'xs': '480px',
+          'sm': '640px',
+          'md': '768px',
+          'lg': '1024px',
+          'xl': '1280px',
+          '2xl': '1536px',
+        },
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+
+  <!-- Component System -->
+  <script src="../assets/js/components.js?v=10"></script>
+  <!-- Cookie Consent -->
+  <script src="../assets/js/cookie-consent.js"></script>
+  <!-- Easter Egg Fun -->
+  <script src="../assets/js/easter-egg.js"></script>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=outfit:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+
+  <style>
+    body, .font-sans {
+      font-family: 'Outfit', sans-serif !important;
+    }
+    
+    /* Lead Generation Page Specific Styles */
+    .lead-gradient-text {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* Benefit Cards */
+    .benefit-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 4px 30px rgba(82, 55, 132, 0.08);
+      border: 1px solid rgba(82, 55, 132, 0.1);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+    }
+    
+    .benefit-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s ease;
+    }
+    
+    .benefit-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(82, 55, 132, 0.15);
+    }
+    
+    .benefit-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .benefit-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      color: white;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      box-shadow: 0 8px 20px rgba(82, 55, 132, 0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    
+    .benefit-card:hover .benefit-icon {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 12px 30px rgba(82, 55, 132, 0.4);
+    }
+    
+    /* Process Steps */
+    .process-step-card {
+      position: relative;
+      background: white;
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 10px 40px rgba(82, 55, 132, 0.08);
+      border: 1px solid rgba(82, 55, 132, 0.08);
+      transition: all 0.4s ease;
+    }
+    
+    .process-step-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(82, 55, 132, 0.15);
+    }
+    
+    .step-number {
+      position: absolute;
+      top: -20px;
+      left: 24px;
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: white;
+      box-shadow: 0 8px 20px rgba(82, 55, 132, 0.3);
+    }
+    
+    /* Stats Cards */
+    .stat-card {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      border-radius: 24px;
+      padding: 2rem;
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s ease;
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-6px);
+    }
+    
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+      animation: shimmer 3s ease-in-out infinite;
+    }
+    
+    @keyframes shimmer {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(10%, 10%); }
+    }
+    
+    /* Use Case Cards */
+    .use-case-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.75rem;
+      box-shadow: 0 4px 20px rgba(82, 55, 132, 0.06);
+      border: 1px solid rgba(82, 55, 132, 0.08);
+      transition: all 0.4s ease;
+      height: 100%;
+    }
+    
+    .use-case-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 40px rgba(82, 55, 132, 0.12);
+      border-color: rgba(82, 55, 132, 0.15);
+    }
+    
+    .use-case-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+      transition: transform 0.3s ease;
+    }
+    
+    .use-case-card:hover .use-case-icon {
+      transform: scale(1.1);
+    }
+    
+    /* Testimonial Cards */
+    .testimonial-card-custom {
+      background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 10px 40px rgba(82, 55, 132, 0.08);
+      border: 1px solid rgba(82, 55, 132, 0.06);
+      position: relative;
+      transition: all 0.4s ease;
+      height: 100%;
+    }
+    
+    .testimonial-card-custom::before {
+      content: '"';
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 5rem;
+      line-height: 1;
+      font-family: Georgia, serif;
+      background: linear-gradient(135deg, rgba(82, 55, 132, 0.1), rgba(39, 189, 218, 0.1));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .testimonial-card-custom:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(82, 55, 132, 0.12);
+    }
+    
+    /* CTA Buttons */
+    .cta-btn-primary {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 1.125rem 2.25rem;
+      border-radius: 14px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 20px rgba(82, 55, 132, 0.35);
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+    }
+    
+    .cta-btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+    
+    .cta-btn-primary:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 12px 35px rgba(82, 55, 132, 0.5);
+    }
+    
+    .cta-btn-primary:hover::before {
+      left: 100%;
+    }
+    
+    .cta-btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary-color);
+      color: var(--primary-color);
+      padding: 1rem 2rem;
+      border-radius: 14px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+    }
+    
+    .cta-btn-outline::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.4s ease;
+      z-index: -1;
+    }
+    
+    .cta-btn-outline:hover {
+      color: white;
+      border-color: transparent;
+      transform: translateY(-4px);
+    }
+    
+    .cta-btn-outline:hover::before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+    
+    /* Section Badge */
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      background: rgba(82, 55, 132, 0.08);
+      border-radius: 50px;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-badge::before {
+      display: none;
+    }
+    
+    .section-badge-icon {
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0.5rem;
+    }
+    
+    .section-badge-icon i {
+      color: white;
+      font-size: 0.75rem;
+    }
+    
+    .section-badge-text {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+    
+    /* Trust Badge */
+    .trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(16, 185, 129, 0.1);
+      border-radius: 50px;
+      font-size: 0.875rem;
+      color: #059669;
+      font-weight: 500;
+    }
+    
+    /* Floating Animation */
+    @keyframes float-gentle {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .float-animation {
+      animation: float-gentle 6s ease-in-out infinite;
+    }
+    
+    /* AI Agent Cards */
+    .ai-agent-card {
+      background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+      border-radius: 24px;
+      padding: 1.75rem;
+      box-shadow: 0 10px 40px rgba(82, 55, 132, 0.08);
+      border: 1px solid rgba(82, 55, 132, 0.06);
+      position: relative;
+      transition: all 0.4s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .ai-agent-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(82, 55, 132, 0.15);
+    }
+    
+    .ai-agent-tag {
+      position: absolute;
+      top: -10px;
+      right: 20px;
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .ai-agent-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 8px 25px rgba(82, 55, 132, 0.25);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    
+    .ai-agent-card:hover .ai-agent-avatar {
+      transform: scale(1.08) rotate(3deg);
+      box-shadow: 0 12px 35px rgba(82, 55, 132, 0.35);
+    }
+    
+    .ai-agent-audio {
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(82, 55, 132, 0.08);
+    }
+    
+    .audio-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    
+    .audio-powered-by {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.65rem;
+      color: #9ca3af;
+      margin-top: 0.5rem;
+    }
+    
+    /* Custom Audio Player Styling */
+    .ai-agent-audio audio {
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(82, 55, 132, 0.05), rgba(39, 189, 218, 0.05));
+    }
+    
+    .ai-agent-audio audio::-webkit-media-controls-panel {
+      background: linear-gradient(135deg, rgba(82, 55, 132, 0.08), rgba(39, 189, 218, 0.08));
+    }
+    
+    /* Akodesk Platform Card */
+    .akodesk-platform-card {
+      background: linear-gradient(145deg, #ffffff 0%, #f0f4ff 100%);
+      border-radius: 32px;
+      padding: 2.5rem;
+      box-shadow: 0 20px 60px rgba(82, 55, 132, 0.12);
+      border: 2px solid rgba(82, 55, 132, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .akodesk-platform-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    }
+    
+    .akodesk-feature-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 0.9rem;
+      background: white;
+      border: 1px solid rgba(82, 55, 132, 0.1);
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      box-shadow: 0 2px 8px rgba(82, 55, 132, 0.06);
+    }
+    
+    .akodesk-feature-tag i {
+      color: var(--secondary-color);
+    }
+    
+    /* Akodesk Logo */
+    .akodesk-logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .akodesk-logo-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(239, 68, 68, 0.3);
+    }
+    
+    .akodesk-logo-icon svg {
+      width: 48px;
+      height: 48px;
+      color: white;
+    }
+    
+    @media (min-width: 640px) {
+      .akodesk-logo-icon {
+        width: 100px;
+        height: 100px;
+        border-radius: 24px;
+      }
+      .akodesk-logo-icon svg {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    
+    /* Custom Audio Player Styles */
+    .custom-audio-player {
+      background: linear-gradient(135deg, rgba(82, 55, 132, 0.05), rgba(39, 189, 218, 0.05));
+      border-radius: 12px;
+      padding: 12px;
+      border: 1px solid rgba(82, 55, 132, 0.1);
+    }
+    
+    .audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .audio-play-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      border: none;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(82, 55, 132, 0.3);
+    }
+    
+    .audio-play-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 16px rgba(82, 55, 132, 0.4);
+    }
+    
+    .audio-play-btn:active {
+      transform: scale(0.95);
+    }
+    
+    .audio-play-btn i {
+      font-size: 14px;
+      margin-left: 2px;
+    }
+    
+    .audio-play-btn.playing i {
+      margin-left: 0;
+    }
+    
+    .audio-progress-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    
+    .audio-progress-bar {
+      width: 100%;
+      height: 6px;
+      background: rgba(82, 55, 132, 0.15);
+      border-radius: 3px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .audio-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      border-radius: 3px;
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+    
+    .audio-time {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: #6b7280;
+      font-weight: 500;
+    }
+    
+    .audio-volume-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: transparent;
+      border: 1px solid rgba(82, 55, 132, 0.15);
+      color: #6b7280;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+    
+    .audio-volume-btn:hover {
+      background: rgba(82, 55, 132, 0.08);
+      color: var(--primary-color);
+    }
+    
+    /* Booking Modal Styles */
+    .booking-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    
+    .booking-modal.active {
+      display: flex;
+    }
+    
+    .booking-modal-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+    }
+    
+    .booking-modal-content {
+      position: relative;
+      background: white;
+      border-radius: 28px;
+      max-width: 500px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Demo Booking Modal Specific Styles */
+    .demo-modal-content {
+      max-width: 900px;
+    }
+    
+    .demo-modal-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    
+    @media (min-width: 768px) {
+      .demo-modal-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    .demo-modal-left {
+      background: linear-gradient(135deg, #fef2f2 0%, #fff1f2 50%, #fce7f3 100%);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .demo-modal-right {
+      padding: 2rem;
+      border-left: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    .demo-check-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+    }
+    
+    .demo-check-icon {
+      width: 24px;
+      height: 24px;
+      background: linear-gradient(135deg, #ef4444, #dc2626);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .demo-check-icon i {
+      color: white;
+      font-size: 10px;
+    }
+
+    /* Mobile Responsive Adjustments */
+    @media (max-width: 640px) {
+      .benefit-card, .process-step-card, .use-case-card, .testimonial-card-custom {
+        padding: 1.5rem;
+      }
+      
+      .benefit-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 1.5rem;
+      }
+      
+      .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        top: -16px;
+        left: 16px;
+      }
+      
+      .stat-card {
+        padding: 1.5rem;
+      }
+      
+      .ai-agent-card {
+        padding: 1.5rem;
+      }
+      
+      .ai-agent-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 16px;
+      }
+      
+      .ai-agent-avatar i {
+        font-size: 1.5rem;
+      }
+      
+      .ai-agent-tag {
+        font-size: 0.6rem;
+        padding: 0.25rem 0.6rem;
+      }
+      
+      .akodesk-platform-card {
+        padding: 1.5rem;
+        border-radius: 24px;
+      }
+      
+      .akodesk-feature-tag {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+  <!-- Skip to Main Content Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Page Loading Indicator -->
+  <div id="page-loader" class="page-loader" aria-hidden="true">
+    <div class="loader-spinner"></div>
+  </div>
+  
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+  
+  <!-- Subtle Flowing Gradient Background -->
+  <div class="flowing-gradient-bg" aria-hidden="true"></div>
+  
+  <!-- Main Content -->
+  <main id="main-content">
+
+  <!-- Navbar Component Placeholder -->
+
+  <!-- ======================= -->
+  <!-- HERO SECTION -->
+  <!-- ======================= -->
+  <section class="relative pt-0 sm:pt-2 lg:pt-2 pb-6 sm:pb-8 bg-white text-gray-800 overflow-hidden">
+    <!-- Background Decorative Elements -->
+    <div class="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-[var(--primary-color)]/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-[var(--secondary-color)]/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+    
+    <div class="container mx-auto px-4 sm:px-6 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-6 lg:gap-10 items-center">
+        <!-- Text Content -->
+        <div class="text-center lg:text-left fade-in lg:-mt-16">
+          <div class="section-badge">
+            <div class="section-badge-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <span class="section-badge-text">Lead Generation Excellence</span>
+          </div>
+
+          <h1 class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight tracking-tight">
+            <span class="lead-gradient-text">Qualified Leads</span>
+            <br>
+            <span class="text-gray-900">Delivered Fast,</span>
+            <br>
+            <span class="lead-gradient-text">Ready to Convert</span>
+          </h1>
+
+          <p class="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-gray-600 leading-relaxed max-w-2xl lg:max-w-none">
+            Stop chasing cold prospects. Our intelligent lead generation system delivers pre-qualified, 
+            high-intent leads directly to your pipeline - so your team can focus on closing deals, not finding them.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 justify-center lg:justify-start">
+            <button onclick="openBookingModal()" class="cta-btn-primary text-center">
+              <i class="fas fa-calendar-check"></i>
+              <span>Schedule a Free Strategy Call</span>
+            </button>
+            <a href="#our-process" class="cta-btn-outline text-center">
+              <span>View Our Process</span>
+              <i class="fas fa-arrow-down"></i>
+            </a>
+          </div>
+
+          <!-- Trust Indicators -->
+          <div class="flex flex-wrap gap-4 items-center justify-center lg:justify-start text-sm text-gray-500">
+            <div class="trust-badge">
+              <i class="fas fa-check-circle"></i>
+              <span>NZ Owned & Operated</span>
+            </div>
+            <div class="trust-badge">
+              <i class="fas fa-shield-alt"></i>
+              <span>GDPR Compliant</span>
+            </div>
+            <div class="trust-badge">
+              <i class="fas fa-handshake"></i>
+              <span>No Lock-in Contracts</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual -->
+        <div class="lg:order-last relative mt-12 sm:mt-16 lg:mt-32">
+          <div class="relative bg-gradient-to-br from-gray-50 via-white to-blue-50 rounded-3xl p-6 sm:p-10 shadow-2xl border border-gray-100">
+            <!-- Decorative floating elements -->
+            <div class="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-[var(--primary-color)]/20 to-[var(--secondary-color)]/20 rounded-2xl blur-xl"></div>
+            <div class="absolute -bottom-4 -left-4 w-20 h-20 bg-gradient-to-tr from-[var(--secondary-color)]/20 to-[var(--primary-color)]/20 rounded-2xl blur-xl"></div>
+            
+            <!-- Lead Flow Illustration -->
+            <div class="relative z-10">
+              <div class="text-center mb-8">
+                <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-[var(--primary-color)] to-[var(--secondary-color)] rounded-2xl shadow-lg mb-4 float-animation">
+                  <i class="fas fa-user-plus text-white text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Lead Captured</h3>
+                <p class="text-sm text-gray-500">Multi-channel acquisition</p>
+              </div>
+              
+              <!-- Flow Arrow -->
+              <div class="flex justify-center mb-6">
+                <div class="w-1 h-12 bg-gradient-to-b from-[var(--primary-color)] to-[var(--secondary-color)] rounded-full"></div>
+              </div>
+              
+              <div class="text-center mb-8">
+                <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-[var(--secondary-color)] to-emerald-500 rounded-2xl shadow-lg mb-4 float-animation" style="animation-delay: 0.5s;">
+                  <i class="fas fa-filter text-white text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Lead Qualified</h3>
+                <p class="text-sm text-gray-500">Intelligent scoring & filtering</p>
+              </div>
+              
+              <!-- Flow Arrow -->
+              <div class="flex justify-center mb-6">
+                <div class="w-1 h-12 bg-gradient-to-b from-[var(--secondary-color)] to-emerald-500 rounded-full"></div>
+              </div>
+              
+              <div class="text-center pb-8">
+                <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl shadow-lg mb-4 float-animation" style="animation-delay: 1s;">
+                  <i class="fas fa-handshake text-white text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Deal Closed</h3>
+                <p class="text-sm text-gray-500">Your team converts</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= -->
+  <!-- BENEFITS SECTION -->
+  <!-- ======================= -->
+  <section class="py-16 sm:py-20 lg:py-24 bg-gray-50 section-separator">
+    <div class="container mx-auto px-4 sm:px-6">
+      <!-- Section Header -->
+      <div class="text-center mb-12 sm:mb-16 fade-in">
+        <div class="section-badge mx-auto">
+          <div class="section-badge-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <span class="section-badge-text">Why Choose Us</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+          Transform Your <span class="lead-gradient-text">Lead Pipeline</span>
+        </h2>
+        <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+          Our lead generation service is designed to deliver measurable results. 
+          Here is what sets us apart from generic lead providers.
+        </p>
+      </div>
+      
+      <!-- Benefits Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+        <!-- Benefit 1 -->
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Lightning-Fast Delivery</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Leads are delivered to your inbox within minutes of capture, not days. 
+            Strike while the iron is hot and connect with prospects when they are most engaged.
+          </p>
+          <div class="flex items-center gap-2 text-sm text-[var(--primary-color)] font-semibold">
+            <i class="fas fa-clock"></i>
+            <span>Average delivery: Under 2 minutes</span>
+          </div>
+        </div>
+        
+        <!-- Benefit 2 -->
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon" style="background: linear-gradient(135deg, var(--secondary-color), #10b981);">
+            <i class="fas fa-filter"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Pre-Qualified Prospects</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Every lead is scored and filtered based on your ideal customer profile. 
+            No more wasting time on unqualified contacts who were never going to buy.
+          </p>
+          <div class="flex items-center gap-2 text-sm text-emerald-600 font-semibold">
+            <i class="fas fa-check-double"></i>
+            <span>Quality-verified leads only</span>
+          </div>
+        </div>
+        
+        <!-- Benefit 3 -->
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon" style="background: linear-gradient(135deg, #f59e0b, #f97316);">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Targeted to Your Niche</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            We do not do generic. Our campaigns are built specifically for your industry, 
+            targeting the exact audience segments that match your ideal customer.
+          </p>
+          <div class="flex items-center gap-2 text-sm text-orange-600 font-semibold">
+            <i class="fas fa-crosshairs"></i>
+            <span>Custom audience targeting</span>
+          </div>
+        </div>
+        
+        <!-- Benefit 4 -->
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon" style="background: linear-gradient(135deg, #8b5cf6, #a855f7);">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Full Transparency</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Real-time dashboards show you exactly where your leads come from, how they are performing, 
+            and what your true cost per acquisition is. No hidden metrics.
+          </p>
+          <div class="flex items-center gap-2 text-sm text-purple-600 font-semibold">
+            <i class="fas fa-chart-bar"></i>
+            <span>Live reporting dashboard</span>
+          </div>
+        </div>
+        
+        <!-- Benefit 5 -->
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon" style="background: linear-gradient(135deg, #ec4899, #f43f5e);">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">CRM Integration</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Leads flow directly into your existing CRM system with full context and tracking. 
+            Works with HubSpot, Salesforce, Zoho, and more.
+          </p>
+          <div class="flex items-center gap-2 text-sm text-pink-600 font-semibold">
+            <i class="fas fa-plug"></i>
+            <span>Seamless system integration</span>
+          </div>
+        </div>
+        
+        <!-- Benefit 6 -->
+        <div class="benefit-card fade-in">
+          <div class="benefit-icon" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Dedicated Support</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            You are never alone. Our NZ-based team provides ongoing campaign optimization, 
+            monthly strategy reviews, and responsive support when you need it.
+          </p>
+          <div class="flex items-center gap-2 text-sm text-cyan-600 font-semibold">
+            <i class="fas fa-user-tie"></i>
+            <span>Local account management</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= -->
+  <!-- HOW IT WORKS SECTION -->
+  <!-- ======================= -->
+  <section id="our-process" class="py-16 sm:py-20 lg:py-24 bg-white section-separator">
+    <div class="container mx-auto px-4 sm:px-6">
+      <!-- Section Header -->
+      <div class="text-center mb-12 sm:mb-16 fade-in">
+        <div class="section-badge mx-auto">
+          <div class="section-badge-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <span class="section-badge-text">Our Process</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+          How <span class="lead-gradient-text">It Works</span>
+        </h2>
+        <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+          From strategy to delivery, here is exactly how we generate qualified leads for your business.
+        </p>
+      </div>
+      
+      <!-- Process Steps -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <!-- Step 1 -->
+        <div class="process-step-card fade-in">
+          <div class="step-number">1</div>
+          <div class="pt-6">
+            <div class="w-14 h-14 bg-[var(--primary-color)]/10 rounded-xl flex items-center justify-center mb-4">
+              <i class="fas fa-comments text-2xl text-[var(--primary-color)]"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Discovery Call</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              We learn about your business, ideal customer profile, and what a qualified lead looks like for you. 
+              No generic campaigns here.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="process-step-card fade-in">
+          <div class="step-number">2</div>
+          <div class="pt-6">
+            <div class="w-14 h-14 bg-[var(--secondary-color)]/10 rounded-xl flex items-center justify-center mb-4">
+              <i class="fas fa-bullhorn text-2xl text-[var(--secondary-color)]"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Campaign Launch</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              We build and launch targeted campaigns across multiple channels to reach your ideal prospects 
+              where they are already spending time.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="process-step-card fade-in">
+          <div class="step-number">3</div>
+          <div class="pt-6">
+            <div class="w-14 h-14 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-4">
+              <i class="fas fa-filter text-2xl text-emerald-600"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Lead Qualification</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Every lead is scored, validated, and enriched before delivery. 
+              Bad data gets filtered out so you only receive quality prospects.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="process-step-card fade-in">
+          <div class="step-number">4</div>
+          <div class="pt-6">
+            <div class="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center mb-4">
+              <i class="fas fa-paper-plane text-2xl text-orange-500"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Instant Delivery</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Qualified leads are delivered instantly to your inbox or CRM. 
+              Your team can follow up within minutes while the prospect is still engaged.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- CTA -->
+      <div class="text-center mt-12 sm:mt-16 fade-in">
+        <button onclick="openBookingModal()" class="cta-btn-primary">
+          <i class="fas fa-calendar-check"></i>
+          <span>Schedule a Free Strategy Call</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ======================= -->
+  <!-- USE CASES SECTION -->
+  <!-- ======================= -->
+  <section class="py-16 sm:py-20 lg:py-24 bg-white section-separator">
+    <div class="container mx-auto px-4 sm:px-6">
+      <!-- Section Header -->
+      <div class="text-center mb-12 sm:mb-16 fade-in">
+        <div class="section-badge mx-auto">
+          <div class="section-badge-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <span class="section-badge-text">Industries We Serve</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+          Perfect for <span class="lead-gradient-text">Your Industry</span>
+        </h2>
+        <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+          Our lead generation strategies are tailored to specific industries. 
+          Here are some of the sectors where we deliver exceptional results.
+        </p>
+      </div>
+      
+      <!-- Use Cases Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6 max-w-6xl mx-auto">
+        <!-- Use Case 1 -->
+        <div class="use-case-card fade-in">
+          <div class="use-case-icon bg-blue-100 text-blue-600">
+            <i class="fas fa-building"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Real Estate</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Connect with motivated buyers and sellers actively searching for property solutions in your area.
+          </p>
+        </div>
+        
+        <!-- Use Case 2 -->
+        <div class="use-case-card fade-in">
+          <div class="use-case-icon bg-emerald-100 text-emerald-600">
+            <i class="fas fa-chart-pie"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Financial Services</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Reach individuals and businesses seeking insurance, mortgages, accounting, and financial planning.
+          </p>
+        </div>
+        
+        <!-- Use Case 3 -->
+        <div class="use-case-card fade-in">
+          <div class="use-case-icon bg-purple-100 text-purple-600">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">SaaS & Technology</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Generate demo requests and trial signups from decision-makers actively evaluating software solutions.
+          </p>
+        </div>
+        
+        <!-- Use Case 4 -->
+        <div class="use-case-card fade-in">
+          <div class="use-case-icon bg-orange-100 text-orange-600">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Home Services</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Connect with homeowners needing renovations, repairs, landscaping, and maintenance services.
+          </p>
+        </div>
+        
+        <!-- Use Case 5 -->
+        <div class="use-case-card fade-in">
+          <div class="use-case-icon bg-red-100 text-red-600">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Healthcare</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Attract patients seeking specialists, clinics, and healthcare services in your specialty area.
+          </p>
+        </div>
+        
+        <!-- Use Case 6 -->
+        <div class="use-case-card fade-in">
+          <div class="use-case-icon bg-cyan-100 text-cyan-600">
+            <i class="fas fa-car"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Automotive</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Reach buyers actively shopping for vehicles, servicing, and automotive solutions.
+          </p>
+        </div>
+        
+        <!-- Use Case 7 -->
+        <div class="use-case-card fade-in">
+          <div class="use-case-icon bg-indigo-100 text-indigo-600">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Education</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Connect with students and professionals seeking courses, training, and educational programs.
+          </p>
+        </div>
+        
+        <!-- Use Case 8 -->
+        <div class="use-case-card fade-in">
+          <div class="use-case-icon bg-pink-100 text-pink-600">
+            <i class="fas fa-gavel"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Legal Services</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Attract clients seeking legal representation, consultation, and professional legal guidance.
+          </p>
+        </div>
+      </div>
+      
+      <!-- More Industries Note -->
+      <div class="text-center mt-10 fade-in">
+        <p class="text-gray-500 mb-4">Do not see your industry? We likely serve it too.</p>
+        <a href="contact.html" class="text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
+          <span>Contact us to discuss your specific needs</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= -->
+  <!-- AI SALES AGENTS SECTION -->
+  <!-- ======================= -->
+  <section class="py-16 sm:py-20 lg:py-24 bg-gray-50 section-separator">
+    <div class="container mx-auto px-4 sm:px-6">
+      <!-- Section Header -->
+      <div class="text-center mb-12 sm:mb-16 fade-in">
+        <div class="section-badge mx-auto">
+          <div class="section-badge-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <span class="section-badge-text">Powered by Akodesk</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+          Meet the <span class="lead-gradient-text">AI Sales Agents</span>
+        </h2>
+        <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto mb-6">
+          Our AI Sales Agents are built on <a href="https://akodesk.com" target="_blank" rel="noopener noreferrer" class="font-bold text-red-500 hover:text-red-600 relative inline-block after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-red-500 after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full">Akodesk</a>, our proprietary voice AI platform. 
+          They call your leads within 2 minutes of capture, qualify them intelligently, and book appointments for your team—24/7.
+        </p>
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[var(--primary-color)]/10 to-[var(--secondary-color)]/10 rounded-full">
+          <i class="fas fa-microchip text-[var(--primary-color)]"></i>
+          <span class="text-sm font-semibold text-gray-700">Enterprise-Grade Voice AI Technology</span>
+        </div>
+      </div>
+      
+      <!-- AI Agents Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-6xl mx-auto mb-12">
+        
+        <!-- Agent 1: Alex - Inbound Sales -->
+        <div class="ai-agent-card fade-in">
+          <div class="ai-agent-tag bg-blue-100 text-blue-700">Best for Inbound</div>
+          <div class="ai-agent-avatar bg-gradient-to-br from-blue-500 to-blue-600">
+            <i class="fas fa-phone-volume text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-1">Alex</h3>
+          <p class="text-sm text-[var(--primary-color)] font-semibold mb-3">Inbound Sales Agent</p>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            Handles incoming enquiries with natural conversation, answers product questions, and qualifies interest in real-time.
+          </p>
+          <!-- Audio Player -->
+          <div class="ai-agent-audio">
+            <div class="audio-label">
+              <i class="fas fa-headphones text-[var(--primary-color)]"></i>
+              <span>Hear Alex in Action</span>
+            </div>
+            <div class="custom-audio-player" data-audio-src="../assets/audio/alex-demo.mp3">
+              <div class="audio-controls">
+                <button class="audio-play-btn" type="button" aria-label="Play">
+                  <i class="fas fa-play"></i>
+                </button>
+                <div class="audio-progress-container">
+                  <div class="audio-progress-bar">
+                    <div class="audio-progress-fill"></div>
+                  </div>
+                  <div class="audio-time">
+                    <span class="audio-current">0:00</span>
+                    <span class="audio-duration">0:00</span>
+                  </div>
+                </div>
+                <button class="audio-volume-btn" type="button" aria-label="Mute">
+                  <i class="fas fa-volume-up"></i>
+                </button>
+              </div>
+            </div>
+            <div class="audio-powered-by">
+              <i class="fas fa-bolt text-[var(--secondary-color)]"></i>
+              <span>Powered by Akodesk AI</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Agent 2: Maya - Lead Qualification -->
+        <div class="ai-agent-card fade-in">
+          <div class="ai-agent-tag bg-emerald-100 text-emerald-700">Best for Qualification</div>
+          <div class="ai-agent-avatar bg-gradient-to-br from-emerald-500 to-teal-600">
+            <i class="fas fa-filter text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-1">Maya</h3>
+          <p class="text-sm text-[var(--primary-color)] font-semibold mb-3">Lead Qualification Agent</p>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            Screens incoming leads with intelligent questions to determine fit, budget, and timeline before passing to your team.
+          </p>
+          <!-- Audio Player -->
+          <div class="ai-agent-audio">
+            <div class="audio-label">
+              <i class="fas fa-headphones text-[var(--primary-color)]"></i>
+              <span>Hear Maya in Action</span>
+            </div>
+            <div class="custom-audio-player" data-audio-src="../assets/audio/maya-demo.mp3">
+              <div class="audio-controls">
+                <button class="audio-play-btn" type="button" aria-label="Play">
+                  <i class="fas fa-play"></i>
+                </button>
+                <div class="audio-progress-container">
+                  <div class="audio-progress-bar">
+                    <div class="audio-progress-fill"></div>
+                  </div>
+                  <div class="audio-time">
+                    <span class="audio-current">0:00</span>
+                    <span class="audio-duration">0:00</span>
+                  </div>
+                </div>
+                <button class="audio-volume-btn" type="button" aria-label="Mute">
+                  <i class="fas fa-volume-up"></i>
+                </button>
+              </div>
+            </div>
+            <div class="audio-powered-by">
+              <i class="fas fa-bolt text-[var(--secondary-color)]"></i>
+              <span>Powered by Akodesk AI</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Agent 3: Jordan - Follow-Ups -->
+        <div class="ai-agent-card fade-in">
+          <div class="ai-agent-tag bg-purple-100 text-purple-700">Best for Follow-Ups</div>
+          <div class="ai-agent-avatar bg-gradient-to-br from-purple-500 to-violet-600">
+            <i class="fas fa-redo-alt text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-1">Jordan</h3>
+          <p class="text-sm text-[var(--primary-color)] font-semibold mb-3">Follow-Up & Re-Engagement</p>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            Re-engages cold leads and no-shows with personalised follow-up calls that reignite interest and bring them back into the pipeline.
+          </p>
+          <!-- Audio Player -->
+          <div class="ai-agent-audio">
+            <div class="audio-label">
+              <i class="fas fa-headphones text-[var(--primary-color)]"></i>
+              <span>Hear Jordan in Action</span>
+            </div>
+            <div class="custom-audio-player" data-audio-src="../assets/audio/jordan-demo.mp3">
+              <div class="audio-controls">
+                <button class="audio-play-btn" type="button" aria-label="Play">
+                  <i class="fas fa-play"></i>
+                </button>
+                <div class="audio-progress-container">
+                  <div class="audio-progress-bar">
+                    <div class="audio-progress-fill"></div>
+                  </div>
+                  <div class="audio-time">
+                    <span class="audio-current">0:00</span>
+                    <span class="audio-duration">0:00</span>
+                  </div>
+                </div>
+                <button class="audio-volume-btn" type="button" aria-label="Mute">
+                  <i class="fas fa-volume-up"></i>
+                </button>
+              </div>
+            </div>
+            <div class="audio-powered-by">
+              <i class="fas fa-bolt text-[var(--secondary-color)]"></i>
+              <span>Powered by Akodesk AI</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Agent 4: Ryan - Appointment Booking -->
+        <div class="ai-agent-card fade-in">
+          <div class="ai-agent-tag bg-orange-100 text-orange-700">Best for Booking</div>
+          <div class="ai-agent-avatar bg-gradient-to-br from-orange-500 to-amber-600">
+            <i class="fas fa-calendar-check text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-1">Ryan</h3>
+          <p class="text-sm text-[var(--primary-color)] font-semibold mb-3">Appointment Booking Agent</p>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            Schedules meetings directly into your calendar, handles objections, confirms availability, and sends reminders automatically.
+          </p>
+          <!-- Audio Player -->
+          <div class="ai-agent-audio">
+            <div class="audio-label">
+              <i class="fas fa-headphones text-[var(--primary-color)]"></i>
+              <span>Hear Ryan in Action</span>
+            </div>
+            <div class="custom-audio-player" data-audio-src="../assets/audio/ryan-demo.mp3">
+              <div class="audio-controls">
+                <button class="audio-play-btn" type="button" aria-label="Play">
+                  <i class="fas fa-play"></i>
+                </button>
+                <div class="audio-progress-container">
+                  <div class="audio-progress-bar">
+                    <div class="audio-progress-fill"></div>
+                  </div>
+                  <div class="audio-time">
+                    <span class="audio-current">0:00</span>
+                    <span class="audio-duration">0:00</span>
+                  </div>
+                </div>
+                <button class="audio-volume-btn" type="button" aria-label="Mute">
+                  <i class="fas fa-volume-up"></i>
+                </button>
+              </div>
+            </div>
+            <div class="audio-powered-by">
+              <i class="fas fa-bolt text-[var(--secondary-color)]"></i>
+              <span>Powered by Akodesk AI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Akodesk Platform Info -->
+      <div class="max-w-4xl mx-auto fade-in">
+        <div class="akodesk-platform-card">
+          <div class="flex flex-col lg:flex-row items-center gap-8">
+            <!-- Platform Logo/Visual - Official Akodesk Logo -->
+            <div class="flex-shrink-0 akodesk-logo-container">
+              <div class="akodesk-logo-icon">
+                <!-- Akodesk Sound Wave Logo -->
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="8" width="2" height="8" rx="1" fill="white"/>
+                  <rect x="8" y="5" width="2" height="14" rx="1" fill="white"/>
+                  <rect x="12" y="3" width="2" height="18" rx="1" fill="white"/>
+                  <rect x="16" y="6" width="2" height="12" rx="1" fill="white"/>
+                  <rect x="20" y="9" width="2" height="6" rx="1" fill="white"/>
+                </svg>
+              </div>
+            </div>
+            
+            <!-- Platform Info -->
+            <div class="flex-1 text-center lg:text-left">
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-[var(--primary-color)]/10 rounded-full mb-3">
+                <i class="fas fa-certificate text-[var(--primary-color)] text-sm"></i>
+                <span class="text-xs font-bold text-[var(--primary-color)] uppercase tracking-wide">Our Proprietary Platform</span>
+              </div>
+              <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+                Built on <a href="https://akodesk.com" target="_blank" rel="noopener noreferrer" class="text-red-500 hover:text-red-600 relative inline-block after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-red-500 after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full">Akodesk</a>
+              </h3>
+              <p class="text-gray-600 leading-relaxed mb-4">
+                Akodesk is our enterprise voice AI platform that powers all our AI Sales Agents. With natural language processing, 
+                real-time analytics, and seamless CRM integration, Akodesk delivers human-like conversations at scale—so your team 
+                can focus on closing, not calling.
+              </p>
+              <!-- Key Features -->
+              <div class="flex flex-wrap gap-3 justify-center lg:justify-start mb-6">
+                <span class="akodesk-feature-tag">
+                  <i class="fas fa-bolt"></i> Sub-2min Response
+                </span>
+                <span class="akodesk-feature-tag">
+                  <i class="fas fa-globe"></i> Multi-Language
+                </span>
+                <span class="akodesk-feature-tag">
+                  <i class="fas fa-plug"></i> CRM Sync
+                </span>
+                <span class="akodesk-feature-tag">
+                  <i class="fas fa-clock"></i> 24/7 Availability
+                </span>
+              </div>
+              <!-- CTA -->
+              <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+                <a href="https://akodesk.com" target="_blank" rel="noopener noreferrer" class="cta-btn-primary text-center">
+                  <i class="fas fa-external-link-alt"></i>
+                  <span>Go to Akodesk Website</span>
+                </a>
+                <button onclick="openDemoModal()" class="cta-btn-outline text-center">
+                  <i class="fas fa-calendar-alt"></i>
+                  <span>Book a Demo</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= -->
+  <!-- FINAL CTA SECTION -->
+  <!-- ======================= -->
+  <section class="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-[var(--primary-color)] via-[#6b4aa0] to-[var(--secondary-color)] relative overflow-hidden">
+    <!-- Background Decorations -->
+    <div class="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-80 h-80 bg-white/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+    
+    <div class="container mx-auto px-4 sm:px-6 relative z-10">
+      <div class="max-w-4xl mx-auto text-center fade-in">
+        <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur rounded-full mb-6">
+          <i class="fas fa-rocket text-white mr-2"></i>
+          <span class="text-sm font-semibold text-white">Ready to Get Started?</span>
+        </div>
+        
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          Start Receiving <br class="hidden sm:block">Qualified Leads Today
+        </h2>
+        
+        <p class="text-lg sm:text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
+          Stop wasting time on cold outreach. Let us fill your pipeline with pre-qualified 
+          prospects who are ready to hear from you. No contracts, no commitments - just results.
+        </p>
+        
+        <!-- CTA Button -->
+        <div class="flex justify-center mb-10">
+          <button onclick="openBookingModal()" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-[var(--primary-color)] rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+            <i class="fas fa-calendar-check"></i>
+            <span>Schedule a Free Strategy Call</span>
+          </button>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+          <a href="tel:+64-22-391-1005" class="group flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/20 hover:border-white/40 hover:scale-105 transition-all duration-300">
+            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center shadow-lg group-hover:shadow-emerald-500/30 transition-shadow">
+              <i class="fas fa-phone text-white"></i>
+            </div>
+            <span class="font-medium text-white">+64 22 391 1005</span>
+          </a>
+          <a href="mailto:info@capitalmediapartners.co.nz" class="group flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/20 hover:border-white/40 hover:scale-105 transition-all duration-300">
+            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center shadow-lg group-hover:shadow-blue-500/30 transition-shadow">
+              <i class="fas fa-envelope text-white"></i>
+            </div>
+            <span class="font-medium text-white">info@capitalmediapartners.co.nz</span>
+          </a>
+        </div>
+        
+        <!-- Trust Elements -->
+        <div class="flex flex-wrap items-center justify-center gap-6 text-white/80 text-sm">
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check-circle text-emerald-400"></i>
+            <span>No Setup Fees</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check-circle text-emerald-400"></i>
+            <span>No Long-Term Contracts</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check-circle text-emerald-400"></i>
+            <span>Cancel Anytime</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check-circle text-emerald-400"></i>
+            <span>NZ Based Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  </main>
+
+  <!-- Footer Component Placeholder -->
+
+  <!-- Strategy Call Booking Modal -->
+  <div id="booking-modal" class="booking-modal">
+    <div class="booking-modal-overlay" onclick="closeBookingModal()"></div>
+    <div class="booking-modal-content">
+      <div class="p-6 sm:p-8">
+        <!-- Close Button -->
+        <button onclick="closeBookingModal()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors">
+          <i class="fas fa-times text-gray-600"></i>
+        </button>
+        
+        <!-- Modal Header -->
+        <div class="text-center mb-8">
+          <div class="w-16 h-16 bg-gradient-to-br from-[var(--primary-color)] to-[var(--secondary-color)] rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-calendar-check text-white text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Schedule Your Free Strategy Call</h3>
+          <p class="text-gray-600">Book a 15-minute call with our lead generation experts</p>
+        </div>
+        
+        <!-- Booking Form -->
+        <form id="booking-form" class="space-y-5">
+          <input type="hidden" name="access_key" value="82939ced-5a94-4046-8212-e3acb13e23dc">
+          <input type="hidden" name="subject" value="Lead Generation Strategy Call Booking">
+          <input type="hidden" name="from_name" value="Capital Media Partners - Strategy Call">
+          <input type="hidden" name="page_source" value="Leads Page – Strategy Call">
+          
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label for="booking-firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
+              <input type="text" id="booking-firstName" name="firstName" required 
+                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all">
+            </div>
+            <div>
+              <label for="booking-lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name *</label>
+              <input type="text" id="booking-lastName" name="lastName" required 
+                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all">
+            </div>
+          </div>
+          
+          <div>
+            <label for="booking-email" class="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+            <input type="email" id="booking-email" name="email" required 
+              class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all">
+          </div>
+          
+          <div>
+            <label for="booking-phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+            <input type="tel" id="booking-phone" name="phone" 
+              class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all">
+          </div>
+          
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label for="booking-date" class="block text-sm font-medium text-gray-700 mb-1">Preferred Date *</label>
+              <input type="date" id="booking-date" name="preferred_date" required 
+                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all">
+            </div>
+            <div>
+              <label for="booking-time" class="block text-sm font-medium text-gray-700 mb-1">Preferred Time *</label>
+              <select id="booking-time" name="preferred_time" required 
+                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all">
+                <option value="">Select time...</option>
+                <option value="09:00 AM">09:00 AM</option>
+                <option value="09:30 AM">09:30 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="10:30 AM">10:30 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="11:30 AM">11:30 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="12:30 PM">12:30 PM</option>
+                <option value="01:00 PM">01:00 PM</option>
+                <option value="01:30 PM">01:30 PM</option>
+                <option value="02:00 PM">02:00 PM</option>
+                <option value="02:30 PM">02:30 PM</option>
+                <option value="03:00 PM">03:00 PM</option>
+                <option value="03:30 PM">03:30 PM</option>
+                <option value="04:00 PM">04:00 PM</option>
+                <option value="04:30 PM">04:30 PM</option>
+                <option value="05:00 PM">05:00 PM</option>
+              </select>
+            </div>
+          </div>
+          
+          <div>
+            <label for="booking-company" class="block text-sm font-medium text-gray-700 mb-1">Company Name</label>
+            <input type="text" id="booking-company" name="company" 
+              class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all">
+          </div>
+          
+          <div>
+            <label for="booking-message" class="block text-sm font-medium text-gray-700 mb-1">What would you like to discuss?</label>
+            <textarea id="booking-message" name="message" rows="3" 
+              class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all resize-none"
+              placeholder="Tell us about your lead generation goals..."></textarea>
+          </div>
+          
+          <!-- Honeypot for spam protection -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+          
+          <button type="submit" id="booking-submit-btn" class="w-full cta-btn-primary justify-center text-center py-4">
+            <i class="fas fa-calendar-check"></i>
+            <span>Book My Strategy Call</span>
+          </button>
+        </form>
+        
+        <!-- Success Message (hidden by default) -->
+        <div id="booking-success" class="hidden text-center py-8">
+          <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-check text-green-500 text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">Booking Request Received!</h3>
+          <p class="text-gray-600 mb-6">Thank you for booking a strategy call. We'll confirm your appointment via email within 24 hours.</p>
+          <button onclick="closeBookingModal()" class="cta-btn-outline">
+            <span>Close</span>
+          </button>
+        </div>
+        
+        <!-- Error Message (hidden by default) -->
+        <div id="booking-error" class="hidden text-center py-4">
+          <div class="bg-red-50 border border-red-200 rounded-xl p-4">
+            <p class="text-red-600"><i class="fas fa-exclamation-circle mr-2"></i>Something went wrong. Please try again or contact us directly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Akodesk Demo Booking Modal -->
+  <div id="demo-modal" class="booking-modal">
+    <div class="booking-modal-overlay" onclick="closeDemoModal()"></div>
+    <div class="booking-modal-content demo-modal-content">
+      <!-- Close Button -->
+      <button onclick="closeDemoModal()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors z-10">
+        <i class="fas fa-times text-gray-600"></i>
+      </button>
+      
+      <div class="demo-modal-grid">
+        <!-- Left Side - Info -->
+        <div class="demo-modal-left">
+          <div class="mb-6">
+            <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Ready to Experience</h3>
+            <h3 class="text-2xl sm:text-3xl font-bold text-red-500 mb-4">AI-Powered Excellence?</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Book a personalized demo and discover how our AI voice platform can transform your business communications. See it in action with your specific use case.
+            </p>
+          </div>
+          
+          <!-- Check Items -->
+          <div class="space-y-2">
+            <div class="demo-check-item">
+              <div class="demo-check-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <span class="text-gray-700 font-medium">Personalized demonstration</span>
+            </div>
+            <div class="demo-check-item">
+              <div class="demo-check-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <span class="text-gray-700 font-medium">No commitment required</span>
+            </div>
+            <div class="demo-check-item">
+              <div class="demo-check-icon">
+                <i class="fas fa-check"></i>
+              </div>
+              <span class="text-gray-700 font-medium">Expert consultation included</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Side - Form -->
+        <div class="demo-modal-right">
+          <h4 class="text-xl font-bold text-gray-900 mb-6 text-center">Book Your Free Demo Call</h4>
+          
+          <form id="demo-form" class="space-y-4">
+            <input type="hidden" name="access_key" value="82939ced-5a94-4046-8212-e3acb13e23dc">
+            <input type="hidden" name="subject" value="Akodesk AI Demo Request">
+            <input type="hidden" name="from_name" value="Capital Media Partners - Akodesk Demo">
+            <input type="hidden" name="page_source" value="Leads Page – Akodesk Demo">
+            
+            <div>
+              <label for="demo-name" class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+              <input type="text" id="demo-name" name="fullName" required placeholder="Enter your full name"
+                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all">
+            </div>
+            
+            <div>
+              <label for="demo-email" class="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+              <input type="email" id="demo-email" name="email" required placeholder="Enter your email address"
+                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all">
+            </div>
+            
+            <div>
+              <label for="demo-phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number *</label>
+              <input type="tel" id="demo-phone" name="phone" required placeholder="Enter your phone number"
+                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all">
+            </div>
+            
+            <div>
+              <label for="demo-business" class="block text-sm font-medium text-gray-700 mb-1">Business Name *</label>
+              <input type="text" id="demo-business" name="businessName" required placeholder="Enter your business name"
+                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all">
+            </div>
+            
+            <div>
+              <label for="demo-industry" class="block text-sm font-medium text-gray-700 mb-1">Business Industry *</label>
+              <select id="demo-industry" name="industry" required 
+                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all">
+                <option value="">Select your industry</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Financial Services">Financial Services</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="SaaS / Technology">SaaS / Technology</option>
+                <option value="E-commerce">E-commerce</option>
+                <option value="Professional Services">Professional Services</option>
+                <option value="Education">Education</option>
+                <option value="Automotive">Automotive</option>
+                <option value="Home Services">Home Services</option>
+                <option value="Legal">Legal</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            
+            <!-- Honeypot for spam protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            
+            <button type="submit" id="demo-submit-btn" class="w-full py-4 bg-gradient-to-r from-red-500 to-red-600 text-white font-bold rounded-xl hover:from-red-600 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-[1.02] flex items-center justify-center gap-2">
+              <span>Get a Free Demo Call</span>
+            </button>
+            
+            <p class="text-xs text-gray-500 text-center mt-3">
+              By submitting this form, you agree to our privacy policy. We'll contact you within 24 hours.
+            </p>
+          </form>
+          
+          <!-- Success Message (hidden by default) -->
+          <div id="demo-success" class="hidden text-center py-8">
+            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-check text-green-500 text-3xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Demo Request Received!</h3>
+            <p class="text-gray-600 mb-6">Thank you for your interest in Akodesk. Our team will contact you within 24 hours to schedule your demo.</p>
+            <button onclick="closeDemoModal()" class="px-6 py-3 border-2 border-gray-300 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
+              <span>Close</span>
+            </button>
+          </div>
+          
+          <!-- Error Message (hidden by default) -->
+          <div id="demo-error" class="hidden text-center py-4">
+            <div class="bg-red-50 border border-red-200 rounded-xl p-4">
+              <p class="text-red-600"><i class="fas fa-exclamation-circle mr-2"></i>Something went wrong. Please try again or contact us directly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Scroll Progress Indicator
+    window.addEventListener('scroll', function() {
+      const scrollProgress = document.getElementById('scroll-progress');
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      scrollProgress.style.width = scrollPercent + '%';
+    });
+    
+    // Add fade-in animation on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      fadeElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.4s ease-out, transform 0.4s ease-out';
+        observer.observe(el);
+      });
+    });
+    
+    // Staggered animation for grid items
+    document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.benefit-card, .process-step-card, .use-case-card, .testimonial-card-custom, .stat-card, .ai-agent-card');
+      
+      cards.forEach((card, index) => {
+        card.style.transitionDelay = (index * 0.05) + 's';
+      });
+    });
+    
+    // =============================================
+    // BOOKING MODAL FUNCTIONS
+    // =============================================
+    function openBookingModal() {
+      const modal = document.getElementById('booking-modal');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      
+      // Set minimum date to tomorrow
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      const minDate = tomorrow.toISOString().split('T')[0];
+      document.getElementById('booking-date').setAttribute('min', minDate);
+    }
+    
+    function closeBookingModal() {
+      const modal = document.getElementById('booking-modal');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    
+    // =============================================
+    // DEMO MODAL FUNCTIONS
+    // =============================================
+    function openDemoModal() {
+      const modal = document.getElementById('demo-modal');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeDemoModal() {
+      const modal = document.getElementById('demo-modal');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    
+    // Close modals on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeBookingModal();
+        closeDemoModal();
+      }
+    });
+    
+    // =============================================
+    // BOOKING FORM SUBMISSION
+    // =============================================
+    const bookingForm = document.getElementById('booking-form');
+    if (bookingForm) {
+      bookingForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitBtn = document.getElementById('booking-submit-btn');
+        const successDiv = document.getElementById('booking-success');
+        const errorDiv = document.getElementById('booking-error');
+        
+        // Disable button and show loading
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Submitting...</span>';
+        errorDiv.classList.add('hidden');
+        
+        const formData = new FormData(bookingForm);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+        
+        try {
+          const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: json
+          });
+          
+          const result = await response.json();
+          
+          if (result.success) {
+            // Show success message
+            bookingForm.classList.add('hidden');
+            successDiv.classList.remove('hidden');
+          } else {
+            throw new Error('Form submission failed');
+          }
+        } catch (error) {
+          console.error('Error:', error);
+          errorDiv.classList.remove('hidden');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i class="fas fa-calendar-check"></i><span>Book My Strategy Call</span>';
+        }
+      });
+    }
+    
+    // =============================================
+    // DEMO FORM SUBMISSION
+    // =============================================
+    const demoForm = document.getElementById('demo-form');
+    if (demoForm) {
+      demoForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitBtn = document.getElementById('demo-submit-btn');
+        const successDiv = document.getElementById('demo-success');
+        const errorDiv = document.getElementById('demo-error');
+        
+        // Disable button and show loading
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Submitting...</span>';
+        errorDiv.classList.add('hidden');
+        
+        const formData = new FormData(demoForm);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+        
+        try {
+          const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: json
+          });
+          
+          const result = await response.json();
+          
+          if (result.success) {
+            // Show success message
+            demoForm.classList.add('hidden');
+            successDiv.classList.remove('hidden');
+          } else {
+            throw new Error('Form submission failed');
+          }
+        } catch (error) {
+          console.error('Error:', error);
+          errorDiv.classList.remove('hidden');
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span>Get a Free Demo Call</span>';
+        }
+      });
+    }
+    
+    // =============================================
+    // CUSTOM AUDIO PLAYER
+    // =============================================
+    document.addEventListener('DOMContentLoaded', function() {
+      const audioPlayers = document.querySelectorAll('.custom-audio-player');
+      let currentlyPlaying = null;
+      
+      audioPlayers.forEach(player => {
+        const audioSrc = player.dataset.audioSrc;
+        const audio = new Audio(audioSrc);
+        audio.preload = 'metadata';
+        
+        const playBtn = player.querySelector('.audio-play-btn');
+        const progressBar = player.querySelector('.audio-progress-bar');
+        const progressFill = player.querySelector('.audio-progress-fill');
+        const currentTimeEl = player.querySelector('.audio-current');
+        const durationEl = player.querySelector('.audio-duration');
+        const volumeBtn = player.querySelector('.audio-volume-btn');
+        
+        let isMuted = false;
+        
+        // Format time helper
+        function formatTime(seconds) {
+          if (isNaN(seconds)) return '0:00';
+          const mins = Math.floor(seconds / 60);
+          const secs = Math.floor(seconds % 60);
+          return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+        
+        // Load metadata
+        audio.addEventListener('loadedmetadata', function() {
+          durationEl.textContent = formatTime(audio.duration);
+        });
+        
+        // Play/Pause
+        playBtn.addEventListener('click', function() {
+          if (audio.paused) {
+            // Pause any currently playing audio
+            if (currentlyPlaying && currentlyPlaying !== audio) {
+              currentlyPlaying.pause();
+              const otherPlayer = currentlyPlaying.parentPlayer;
+              if (otherPlayer) {
+                otherPlayer.querySelector('.audio-play-btn').innerHTML = '<i class="fas fa-play"></i>';
+                otherPlayer.querySelector('.audio-play-btn').classList.remove('playing');
+              }
+            }
+            
+            audio.play();
+            audio.parentPlayer = player;
+            currentlyPlaying = audio;
+            playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            playBtn.classList.add('playing');
+          } else {
+            audio.pause();
+            playBtn.innerHTML = '<i class="fas fa-play"></i>';
+            playBtn.classList.remove('playing');
+          }
+        });
+        
+        // Update progress
+        audio.addEventListener('timeupdate', function() {
+          const progress = (audio.currentTime / audio.duration) * 100;
+          progressFill.style.width = progress + '%';
+          currentTimeEl.textContent = formatTime(audio.currentTime);
+        });
+        
+        // Click on progress bar
+        progressBar.addEventListener('click', function(e) {
+          const rect = progressBar.getBoundingClientRect();
+          const percent = (e.clientX - rect.left) / rect.width;
+          audio.currentTime = percent * audio.duration;
+        });
+        
+        // Audio ended
+        audio.addEventListener('ended', function() {
+          playBtn.innerHTML = '<i class="fas fa-play"></i>';
+          playBtn.classList.remove('playing');
+          progressFill.style.width = '0%';
+          currentTimeEl.textContent = '0:00';
+        });
+        
+        // Volume toggle
+        volumeBtn.addEventListener('click', function() {
+          isMuted = !isMuted;
+          audio.muted = isMuted;
+          volumeBtn.innerHTML = isMuted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

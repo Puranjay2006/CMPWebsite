@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consideration Stage: Email Nurturing & Retargeting – Capital Media Partners</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Nurture leads through the consideration stage with strategic email marketing and retargeting campaigns. Build trust and guide prospects toward conversion.">
+  <meta name="keywords" content="email marketing NZ, retargeting ads, lead nurturing, marketing automation, drip campaigns, remarketing strategies">
+  <meta name="author" content="Capital Media Partners">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Consideration Stage: Email & Retargeting – Capital Media Partners">
+  <meta property="og:description" content="Nurture leads through the consideration stage with email marketing and retargeting campaigns.">
+  <meta property="og:url" content="https://capitalmediapartners.co.nz/pages/services/digital-marketing/consideration.html">
+  <meta property="og:type" content="website">
+
+  <link rel="canonical" href="https://capitalmediapartners.co.nz/pages/services/digital-marketing/consideration.html">
+  <meta name="theme-color" content="#543CF8">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../../../assets/images/logos/Capital-Media-Partners-Logo.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../../assets/css/styles.css">
+
+  <!-- Component System -->
+  <script src="../../../assets/js/components.js?v=10"></script>
+  <script src="../../../assets/js/cookie-consent.js"></script>
+  <!-- Easter Egg Fun -->
+  <script src="../../../assets/js/easter-egg.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=outfit:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+  
+  <style>
+    body, .font-sans { font-family: 'Outfit', sans-serif !important; }
+    
+    /* Premium Design System */
+    :root {
+      --stage-primary: #06b6d4;
+      --stage-secondary: #10b981;
+      --stage-accent: #0891b2;
+    }
+    
+    .stage-gradient { background: linear-gradient(135deg, #06b6d4 0%, #0891b2 50%, #10b981 100%); }
+    .stage-gradient-text {
+      background: linear-gradient(135deg, #06b6d4, #10b981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .funnel-nav {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .funnel-nav-item {
+      padding: 0.6rem 1.25rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      text-decoration: none;
+      border: 3px solid transparent;
+    }
+    
+    .funnel-nav-item.active {
+      background: linear-gradient(135deg, #27bdda, #10b981);
+      color: white;
+      box-shadow: 0 4px 20px rgba(39, 189, 218, 0.4), 0 0 0 3px rgba(39, 189, 218, 0.15);
+      border: 3px solid #523784;
+      outline: none;
+      transform: scale(1.02);
+    }
+    
+    .funnel-nav-item:not(.active) {
+      background: rgba(255, 255, 255, 0.9);
+      color: #64748b;
+      backdrop-filter: blur(10px);
+    }
+    
+    .funnel-nav-item:not(.active):hover {
+      background: rgba(255, 255, 255, 1);
+      color: #27bdda;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(39, 189, 218, 0.2);
+    }
+    
+    .key-point-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.75rem;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(6, 182, 212, 0.1);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .key-point-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #06b6d4, #10b981);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+    
+    .key-point-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(6, 182, 212, 0.15);
+    }
+    
+    .key-point-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .tip-box {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.08), rgba(16, 185, 129, 0.08));
+      border-left: 4px solid #06b6d4;
+      border-radius: 0 16px 16px 0;
+      padding: 1.75rem;
+      position: relative;
+    }
+    
+    .tip-box::before {
+      content: '💡';
+      position: absolute;
+      top: -12px;
+      left: 12px;
+      font-size: 1.5rem;
+    }
+    
+    .channel-card {
+      background: white;
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(6, 182, 212, 0.08);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .channel-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.03) 0%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    
+    .channel-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(6, 182, 212, 0.18);
+    }
+    
+    .channel-card:hover::after {
+      opacity: 1;
+    }
+    
+    .email-sequence {
+      position: relative;
+      padding-left: 2rem;
+    }
+    
+    .email-sequence::before {
+      content: '';
+      position: absolute;
+      left: 0.5rem;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, #06b6d4, #10b981);
+    }
+    
+    .email-step {
+      position: relative;
+      padding: 1.25rem;
+      background: white;
+      border-radius: 16px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
+    }
+    
+    .email-step:hover {
+      transform: translateX(8px);
+      box-shadow: 0 8px 25px rgba(6, 182, 212, 0.15);
+    }
+    
+    .email-step::before {
+      content: '';
+      position: absolute;
+      left: -1.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      background: linear-gradient(135deg, #06b6d4, #10b981);
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 3px 8px rgba(6, 182, 212, 0.3);
+    }
+    
+    /* Back Button Premium Style */
+    .back-btn {
+      position: absolute;
+      top: 24px;
+      left: 16px;
+      z-index: 20;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 50px;
+      color: #475569;
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(6, 182, 212, 0.1);
+    }
+    
+    .back-btn:hover {
+      background: linear-gradient(135deg, #06b6d4, #0891b2);
+      color: white;
+      transform: translateX(-4px);
+      box-shadow: 0 8px 30px rgba(6, 182, 212, 0.4);
+    }
+    
+    .back-btn:hover i {
+      transform: translateX(-3px);
+    }
+    
+    .back-btn i {
+      transition: transform 0.3s ease;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+  <!-- Skip to Main Content Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Page Loading Indicator -->
+  <div id="page-loader" class="page-loader" aria-hidden="true">
+    <div class="loader-spinner"></div>
+  </div>
+  
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+  <div class="flowing-gradient-bg" aria-hidden="true"></div>
+
+  <!-- Header Component -->
+  <div data-component="header" data-base-path="../../.."></div>
+  
+  <!-- Main Content -->
+  <main id="main-content">
+
+  <!-- Hero Section -->
+  <section class="relative pt-20 sm:pt-24 lg:pt-28 overflow-hidden">
+    <!-- Back Button -->
+    <a href="../digital-marketing.html" class="back-btn">
+      <i class="fas fa-arrow-left"></i>
+      <span>Back to Overview</span>
+    </a>
+    
+    <div class="stage-gradient py-16 sm:py-24">
+      <div class="container mx-auto px-4 sm:px-6">
+        <!-- Funnel Navigation -->
+        <div class="funnel-nav mb-8">
+          <a href="awareness.html" class="funnel-nav-item">Awareness</a>
+          <a href="interest.html" class="funnel-nav-item">Interest</a>
+          <a href="consideration.html" class="funnel-nav-item active">Consideration</a>
+          <a href="conversion.html" class="funnel-nav-item">Conversion</a>
+        </div>
+        
+        <div class="max-w-4xl mx-auto text-center text-white">
+          <div class="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur rounded-full mb-6">
+            <span class="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></span>
+            <span class="text-sm font-medium">Funnel Stage 3 of 4</span>
+          </div>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+            <i class="fas fa-brain mr-4 opacity-80"></i>Consideration
+          </h1>
+          <p class="text-xl sm:text-2xl opacity-90 mb-4">Email Nurture & Retargeting</p>
+          <p class="text-lg opacity-80 max-w-2xl mx-auto">
+            Where interested prospects evaluate their options. This critical stage builds trust through strategic communication and keeps your brand top-of-mind during the decision-making process.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview Section -->
+  <section class="section-separator bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center px-4 py-2 primary-light-bg rounded-full mb-6">
+            <span class="w-2 h-2 primary-bg rounded-full mr-2"></span>
+            <span class="text-sm font-medium primary-text">Stage Overview</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+            Nurture Prospects Into <span class="stage-gradient-text">Buyers</span>
+          </h2>
+          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+            The consideration stage is where prospects actively compare options. Through personalized email sequences and strategic retargeting, we stay present in their decision-making process while building the trust needed to close.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            At this stage, we collect sales information that helps assess lead quality—qualification criteria, objections, and lost reasons. This data feeds back into marketing to improve campaign targeting.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-4">
+          <div class="key-point-card text-center">
+            <div class="w-14 h-14 bg-gradient-to-br from-[var(--primary-color)] to-[var(--secondary-color)] rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-envelope-open-text text-white text-xl"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Email Nurture</h3>
+            <p class="text-sm text-gray-600">Automated sequences that educate and build trust</p>
+          </div>
+          
+          <div class="key-point-card text-center">
+            <div class="w-14 h-14 bg-gradient-to-br from-[var(--secondary-color)] to-[var(--primary-color)] rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-redo text-white text-xl"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Retargeting</h3>
+            <p class="text-sm text-gray-600">Stay visible to interested prospects</p>
+          </div>
+          
+          <div class="key-point-card text-center">
+            <div class="w-14 h-14 bg-gradient-to-br from-[var(--primary-color)] to-[var(--secondary-color)] rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-star text-white text-xl"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Lead Scoring</h3>
+            <p class="text-sm text-gray-600">Identify sales-ready prospects</p>
+          </div>
+          
+          <div class="key-point-card text-center">
+            <div class="w-14 h-14 bg-gradient-to-br from-[var(--secondary-color)] to-[var(--primary-color)] rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-robot text-white text-xl"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Automation</h3>
+            <p class="text-sm text-gray-600">Workflows that run 24/7</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Email Marketing Section -->
+  <section class="section-separator bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <i class="fas fa-envelope text-[var(--primary-color)] mr-3"></i>Email Nurture Sequences
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Automated email workflows that deliver the right message at the right time, guiding prospects toward conversion.
+        </p>
+      </div>
+      
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Email Sequence Timeline -->
+        <div>
+          <h3 class="text-xl font-bold text-gray-900 mb-6">Sample Nurture Sequence</h3>
+          <div class="email-sequence">
+            <div class="email-step">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-semibold text-gray-900">Welcome Email</span>
+                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Day 0</span>
+              </div>
+              <p class="text-sm text-gray-600">Introduce your brand, set expectations, deliver promised content</p>
+            </div>
+            
+            <div class="email-step">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-semibold text-gray-900">Educational Value</span>
+                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Day 3</span>
+              </div>
+              <p class="text-sm text-gray-600">Share helpful content addressing common pain points</p>
+            </div>
+            
+            <div class="email-step">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-semibold text-gray-900">Case Study</span>
+                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Day 7</span>
+              </div>
+              <p class="text-sm text-gray-600">Social proof showing results from similar clients</p>
+            </div>
+            
+            <div class="email-step">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-semibold text-gray-900">Overcome Objections</span>
+                <span class="text-xs bg-orange-100 text-orange-700 px-2 py-1 rounded-full">Day 14</span>
+              </div>
+              <p class="text-sm text-gray-600">Address common concerns and FAQs</p>
+            </div>
+            
+            <div class="email-step">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-semibold text-gray-900">Soft CTA</span>
+                <span class="text-xs bg-red-100 text-red-700 px-2 py-1 rounded-full">Day 21</span>
+              </div>
+              <p class="text-sm text-gray-600">Invitation to book a call or start a trial</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Email Features -->
+        <div class="space-y-6">
+          <div class="channel-card">
+            <h3 class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-3">
+              <i class="fas fa-user-cog text-[var(--primary-color)]"></i>
+              Personalization
+            </h3>
+            <p class="text-gray-600 text-sm">Dynamic content based on behavior, industry, and funnel stage. Each email feels personally written for the recipient.</p>
+          </div>
+          
+          <div class="channel-card">
+            <h3 class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-3">
+              <i class="fas fa-code-branch text-[var(--secondary-color)]"></i>
+              Behavioral Triggers
+            </h3>
+            <p class="text-gray-600 text-sm">Send targeted emails based on actions—page visits, downloads, email opens, link clicks—not just time delays.</p>
+          </div>
+          
+          <div class="channel-card">
+            <h3 class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-3">
+              <i class="fas fa-vial text-[var(--primary-color)]"></i>
+              A/B Testing
+            </h3>
+            <p class="text-gray-600 text-sm">Continuous testing of subject lines, content, CTAs, and send times to maximize engagement and conversion.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Retargeting Section -->
+  <section class="section-separator bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <i class="fas fa-bullseye text-[var(--secondary-color)] mr-3"></i>Strategic Retargeting
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Stay in front of prospects who've shown interest but haven't converted yet. Multiple touchpoints across channels.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="channel-card text-center">
+          <div class="w-16 h-16 bg-gradient-to-br from-[var(--primary-color)] to-[var(--secondary-color)] rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-display text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Display Retargeting</h3>
+          <p class="text-gray-600 mb-4">Visual ads across Google Display Network reaching visitors who've been to your site.</p>
+          <ul class="text-sm text-gray-500 text-left space-y-2">
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Dynamic product ads</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Sequential messaging</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Frequency capping</li>
+          </ul>
+        </div>
+        
+        <div class="channel-card text-center">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#1877F2] to-[#0A66C2] rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-share-alt text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Social Retargeting</h3>
+          <p class="text-gray-600 mb-4">Custom audiences on Facebook, Instagram, and LinkedIn based on website behavior.</p>
+          <ul class="text-sm text-gray-500 text-left space-y-2">
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Website visitor audiences</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Email list matching</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Engagement retargeting</li>
+          </ul>
+        </div>
+        
+        <div class="channel-card text-center">
+          <div class="w-16 h-16 bg-gradient-to-br from-[#4285F4] to-[#34A853] rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i class="fas fa-search text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Search Retargeting</h3>
+          <p class="text-gray-600 mb-4">RLSA campaigns that bid more aggressively when past visitors search relevant terms.</p>
+          <ul class="text-sm text-gray-500 text-left space-y-2">
+            <li><i class="fas fa-check text-green-500 mr-2"></i>RLSA bid adjustments</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Custom ad copy</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i>Expanded keyword targeting</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sales Information Section -->
+  <section class="section-separator bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Sales Information → CRM</h2>
+        <p class="text-lg text-gray-600">Capturing data that improves both sales and marketing</p>
+      </div>
+      
+      <div class="bg-white rounded-3xl p-8 shadow-lg">
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-clipboard-check text-blue-600"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Qualification Criteria</h3>
+              <p class="text-sm text-gray-600">Budget, authority, need, timeline—tracked and scored</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-times-circle text-red-600"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Lost Reasons</h3>
+              <p class="text-sm text-gray-600">Why deals don't close—valuable feedback for marketing</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-comment-dots text-yellow-600"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Common Objections</h3>
+              <p class="text-sm text-gray-600">What concerns prospects have—informs content strategy</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-list-dropdown text-green-600"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Validated Data</h3>
+              <p class="text-sm text-gray-600">Dropdown fields ensure clean, mineable CRM data</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Pro Tip -->
+      <div class="tip-box mt-12">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-[#06b6d4] rounded-xl flex items-center justify-center flex-shrink-0">
+            <i class="fas fa-lightbulb text-white text-xl"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-2">Pro Tip</h3>
+            <p class="text-gray-600">
+              Ensure your CRM allows you to analyze sales information effectively so it can be incorporated back into marketing campaigns. Use dropdown fields instead of free text so data is validated and can be used for segmentation and reporting.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Metrics -->
+  <section class="section-separator bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Key Consideration Metrics</h2>
+        <p class="text-lg text-gray-600">What we track and optimize at this stage</p>
+      </div>
+      
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-6 text-center">
+          <div class="text-3xl font-bold stage-gradient-text mb-2">Open Rate</div>
+          <p class="text-sm text-gray-500">Email engagement health</p>
+        </div>
+        <div class="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-6 text-center">
+          <div class="text-3xl font-bold stage-gradient-text mb-2">Click Rate</div>
+          <p class="text-sm text-gray-500">Content resonance</p>
+        </div>
+        <div class="bg-gradient-to-br from-gray-50 to-cyan-50 rounded-2xl p-6 text-center">
+          <div class="text-3xl font-bold stage-gradient-text mb-2">Lead Score</div>
+          <p class="text-sm text-gray-500">Sales readiness</p>
+        </div>
+        <div class="bg-gradient-to-br from-gray-50 to-teal-50 rounded-2xl p-6 text-center">
+          <div class="text-3xl font-bold stage-gradient-text mb-2">Frequency</div>
+          <p class="text-sm text-gray-500">Retargeting impressions</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="stage-gradient py-16 sm:py-20 text-white">
+    <div class="max-w-4xl mx-auto text-center px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-6">Ready to Nurture More Leads?</h2>
+      <p class="text-lg opacity-90 mb-8">
+        Let's build email sequences and retargeting campaigns that guide prospects to conversion.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="interest.html" class="px-8 py-4 bg-white/20 backdrop-blur text-white font-semibold rounded-xl hover:bg-white/30 transition-all inline-flex items-center justify-center gap-2">
+          <i class="fas fa-arrow-left"></i>
+          Previous: Interest
+        </a>
+        <a href="conversion.html" class="px-8 py-4 bg-white text-[#06b6d4] font-semibold rounded-xl hover:bg-gray-100 transition-all inline-flex items-center justify-center gap-2">
+          Next: Conversion
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  </main>
+
+  <!-- Footer Component -->
+  <div data-component="footer" data-base-path="../../.."></div>
+
+  <!-- Scroll to Top -->
+  <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script>
+    document.getElementById('scroll-to-top')?.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    window.addEventListener('scroll', function() {
+      const scrollBtn = document.getElementById('scroll-to-top');
+      if (scrollBtn) {
+        scrollBtn.classList.toggle('visible', window.scrollY > 400);
+      }
+    }, { passive: true });
+  </script>
+</body>
+</html>

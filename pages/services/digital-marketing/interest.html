@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interest Stage: Social Media & Content Marketing – Capital Media Partners</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Build engagement and interest with strategic social media marketing and content creation. Turn visitors into engaged prospects with compelling content strategies.">
+  <meta name="keywords" content="social media marketing NZ, content marketing, Facebook Ads, Instagram marketing, LinkedIn B2B, engagement strategies">
+  <meta name="author" content="Capital Media Partners">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Interest Stage: Social Media & Content – Capital Media Partners">
+  <meta property="og:description" content="Build engagement and interest with strategic social media marketing and content creation.">
+  <meta property="og:url" content="https://capitalmediapartners.co.nz/pages/services/digital-marketing/interest.html">
+  <meta property="og:type" content="website">
+
+  <link rel="canonical" href="https://capitalmediapartners.co.nz/pages/services/digital-marketing/interest.html">
+  <meta name="theme-color" content="#543CF8">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../../../assets/images/logos/Capital-Media-Partners-Logo.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../../assets/css/styles.css">
+
+  <!-- Component System -->
+  <script src="../../../assets/js/components.js?v=10"></script>
+  <script src="../../../assets/js/cookie-consent.js"></script>
+  <!-- Easter Egg Fun -->
+  <script src="../../../assets/js/easter-egg.js"></script>
+  
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=outfit:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+  
+  <style>
+    body, .font-sans { font-family: 'Outfit', sans-serif !important; }
+    
+    /* Premium Design System */
+    :root {
+      --stage-primary: #8b5cf6;
+      --stage-secondary: #06b6d4;
+      --stage-accent: #7c3aed;
+    }
+    
+    .stage-gradient { background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #06b6d4 100%); }
+    .stage-gradient-text {
+      background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .funnel-nav {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .funnel-nav-item {
+      padding: 0.6rem 1.25rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      text-decoration: none;
+      border: 3px solid transparent;
+    }
+    
+    .funnel-nav-item.active {
+      background: linear-gradient(135deg, #6b4aa0, #27bdda);
+      color: white;
+      box-shadow: 0 4px 20px rgba(107, 74, 160, 0.4), 0 0 0 3px rgba(107, 74, 160, 0.15);
+      border: 3px solid var(--secondary-color);
+      outline: none;
+      transform: scale(1.02);
+    }
+    
+    .funnel-nav-item:not(.active) {
+      background: rgba(255, 255, 255, 0.9);
+      color: #64748b;
+      backdrop-filter: blur(10px);
+    }
+    
+    .funnel-nav-item:not(.active):hover {
+      background: rgba(255, 255, 255, 1);
+      color: #6b4aa0;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(107, 74, 160, 0.2);
+    }
+    
+    .key-point-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.75rem;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(139, 92, 246, 0.1);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .key-point-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+    
+    .key-point-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15);
+    }
+    
+    .key-point-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .tip-box {
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(6, 182, 212, 0.08));
+      border-left: 4px solid #8b5cf6;
+      border-radius: 0 16px 16px 0;
+      padding: 1.75rem;
+      position: relative;
+    }
+    
+    .tip-box::before {
+      content: '💡';
+      position: absolute;
+      top: -12px;
+      left: 12px;
+      font-size: 1.5rem;
+    }
+    
+    .channel-card {
+      background: white;
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(139, 92, 246, 0.08);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .channel-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.03) 0%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    
+    .channel-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(139, 92, 246, 0.18);
+    }
+    
+    .channel-card:hover::after {
+      opacity: 1;
+    }
+    
+    .social-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .social-icon:hover {
+      transform: scale(1.15) rotate(5deg);
+    }
+    
+    /* Back Button Premium Style */
+    .back-btn {
+      position: absolute;
+      top: 24px;
+      left: 16px;
+      z-index: 20;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 50px;
+      color: #475569;
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(139, 92, 246, 0.1);
+    }
+    
+    .back-btn:hover {
+      background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+      color: white;
+      transform: translateX(-4px);
+      box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4);
+    }
+    
+    .back-btn:hover i {
+      transform: translateX(-3px);
+    }
+    
+    .back-btn i {
+      transition: transform 0.3s ease;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+  <!-- Skip to Main Content Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Page Loading Indicator -->
+  <div id="page-loader" class="page-loader" aria-hidden="true">
+    <div class="loader-spinner"></div>
+  </div>
+  
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+  <div class="flowing-gradient-bg" aria-hidden="true"></div>
+
+  <!-- Header Component -->
+  <div data-component="header" data-base-path="../../.."></div>
+  
+  <!-- Main Content -->
+  <main id="main-content">
+
+  <!-- Hero Section -->
+  <section class="relative pt-20 sm:pt-24 lg:pt-28 overflow-hidden">
+    <!-- Back Button -->
+    <a href="../digital-marketing.html" class="back-btn">
+      <i class="fas fa-arrow-left"></i>
+      <span>Back to Overview</span>
+    </a>
+    
+    <div class="stage-gradient py-16 sm:py-24">
+      <div class="container mx-auto px-4 sm:px-6">
+        <!-- Funnel Navigation -->
+        <div class="funnel-nav mb-8">
+          <a href="awareness.html" class="funnel-nav-item">Awareness</a>
+          <a href="interest.html" class="funnel-nav-item active">Interest</a>
+          <a href="consideration.html" class="funnel-nav-item">Consideration</a>
+          <a href="conversion.html" class="funnel-nav-item">Conversion</a>
+        </div>
+        
+        <div class="max-w-4xl mx-auto text-center text-white">
+          <div class="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur rounded-full mb-6">
+            <span class="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></span>
+            <span class="text-sm font-medium">Funnel Stage 2 of 4</span>
+          </div>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+            <i class="fas fa-heart mr-4 opacity-80"></i>Interest
+          </h1>
+          <p class="text-xl sm:text-2xl opacity-90 mb-4">Social Media & Content</p>
+          <p class="text-lg opacity-80 max-w-2xl mx-auto">
+            Where awareness transforms into engagement. This stage captures attention and builds genuine interest in your brand through compelling content and social proof.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview Section -->
+  <section class="section-separator bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center px-4 py-2 primary-light-bg rounded-full mb-6">
+            <span class="w-2 h-2 primary-bg rounded-full mr-2"></span>
+            <span class="text-sm font-medium primary-text">Stage Overview</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+            Turn Attention Into <span class="stage-gradient-text">Engagement</span>
+          </h2>
+          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+            The interest stage is where your brand starts building a relationship with prospects. Through engaging social media content, valuable resources, and compelling storytelling, we transform passive viewers into active followers who want to learn more.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            We push as much marketing information to your CRM as possible—where leads come from, what they engaged with, and how they interacted. This data powers smarter sales conversations.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-4">
+          <div class="key-point-card text-center">
+            <div class="w-14 h-14 bg-[#1877F2] rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fab fa-facebook-f text-white text-xl"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Facebook</h3>
+            <p class="text-sm text-gray-600">Reach billions with targeted social campaigns</p>
+          </div>
+          
+          <div class="key-point-card text-center">
+            <div class="w-14 h-14 bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fab fa-instagram text-white text-xl"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Instagram</h3>
+            <p class="text-sm text-gray-600">Visual storytelling that resonates</p>
+          </div>
+          
+          <div class="key-point-card text-center">
+            <div class="w-14 h-14 bg-[#0A66C2] rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fab fa-linkedin-in text-white text-xl"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">LinkedIn</h3>
+            <p class="text-sm text-gray-600">B2B lead generation at scale</p>
+          </div>
+          
+          <div class="key-point-card text-center">
+            <div class="w-14 h-14 bg-gradient-to-br from-[var(--primary-color)] to-[var(--secondary-color)] rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-pen-fancy text-white text-xl"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-2">Content</h3>
+            <p class="text-sm text-gray-600">Educational content that converts</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Media Platforms -->
+  <section class="section-separator bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          Social Media Advertising
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Strategic paid social campaigns across all major platforms, each integrated with your CRM for full attribution.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Facebook & Instagram -->
+        <div class="channel-card">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="social-icon bg-[#1877F2] text-white">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="social-icon bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white">
+              <i class="fab fa-instagram"></i>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Meta Ads</h3>
+          <p class="text-gray-600 mb-4">Reach your audience across Facebook, Instagram, Messenger, and the Audience Network with precision targeting.</p>
+          <ul class="space-y-2 text-sm text-gray-500">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Lead generation forms</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Custom & lookalike audiences</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Conversion API integration</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Dynamic creative testing</li>
+          </ul>
+        </div>
+        
+        <!-- LinkedIn -->
+        <div class="channel-card">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="social-icon bg-[#0A66C2] text-white">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">LinkedIn Ads</h3>
+          <p class="text-gray-600 mb-4">The premier B2B advertising platform. Target decision-makers by job title, company, industry, and more.</p>
+          <ul class="space-y-2 text-sm text-gray-500">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Sponsored content & InMail</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Account-based marketing</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Lead gen forms with CRM sync</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Company & contact targeting</li>
+          </ul>
+        </div>
+        
+        <!-- Other Platforms -->
+        <div class="channel-card">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="social-icon bg-black text-white">
+              <i class="fab fa-x-twitter"></i>
+            </div>
+            <div class="social-icon bg-[#E60023] text-white">
+              <i class="fab fa-pinterest-p"></i>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Additional Platforms</h3>
+          <p class="text-gray-600 mb-4">Expand your reach with targeted campaigns on Twitter/X, Pinterest, TikTok and emerging platforms.</p>
+          <ul class="space-y-2 text-sm text-gray-500">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Platform-specific strategies</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Audience research & targeting</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Creative optimization</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Cross-platform attribution</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Marketing Section -->
+  <section class="section-separator bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <i class="fas fa-file-alt text-[var(--secondary-color)] mr-3"></i>Content Marketing
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Create valuable content that educates, engages, and positions your brand as the go-to authority in your industry.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="channel-card">
+          <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+            <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+              <i class="fas fa-blog text-purple-600"></i>
+            </div>
+            Blog & Article Content
+          </h3>
+          <p class="text-gray-600 mb-4">Long-form content that ranks in search and establishes thought leadership.</p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-green-500 mt-1"></i>
+              <span class="text-gray-600">SEO-optimized articles targeting buyer keywords</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-green-500 mt-1"></i>
+              <span class="text-gray-600">Industry insights and trend analysis</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-green-500 mt-1"></i>
+              <span class="text-gray-600">Case studies showcasing client success</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-green-500 mt-1"></i>
+              <span class="text-gray-600">How-to guides and educational resources</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="channel-card">
+          <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+              <i class="fas fa-share-nodes text-blue-600"></i>
+            </div>
+            Social Content
+          </h3>
+          <p class="text-gray-600 mb-4">Engaging content designed for social sharing and community building.</p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-green-500 mt-1"></i>
+              <span class="text-gray-600">Platform-specific content formats</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-green-500 mt-1"></i>
+              <span class="text-gray-600">Video content and reels production</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-green-500 mt-1"></i>
+              <span class="text-gray-600">Infographics and visual assets</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-green-500 mt-1"></i>
+              <span class="text-gray-600">User-generated content campaigns</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marketing Information to CRM -->
+  <section class="section-separator bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Marketing Information → CRM</h2>
+        <p class="text-lg text-gray-600">Every engagement tracked and fed back to your sales team</p>
+      </div>
+      
+      <div class="bg-white rounded-3xl p-8 shadow-lg">
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-map-marker-alt text-blue-600"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Lead Source</h3>
+              <p class="text-sm text-gray-600">Where did the lead come from? Facebook? Google? LinkedIn?</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-mouse-pointer text-purple-600"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Engagement History</h3>
+              <p class="text-sm text-gray-600">What content did they engage with before converting?</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-ad text-green-600"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Campaign Attribution</h3>
+              <p class="text-sm text-gray-600">Which campaign and ad creative drove the conversion?</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-route text-orange-600"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-1">Journey Mapping</h3>
+              <p class="text-sm text-gray-600">Full path from first touch to conversion, tracked in CRM.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Pro Tip -->
+      <div class="tip-box mt-12">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-[#8b5cf6] rounded-xl flex items-center justify-center flex-shrink-0">
+            <i class="fas fa-lightbulb text-white text-xl"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-2">Pro Tip</h3>
+            <p class="text-gray-600">
+              The more marketing information you can share with the sales team, the more constructive the sales conversations. When a rep knows a lead engaged with a specific case study about their industry, they can personalize the conversation immediately.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Metrics -->
+  <section class="section-separator bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Key Interest Metrics</h2>
+        <p class="text-lg text-gray-600">What we track and optimize at this stage</p>
+      </div>
+      
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-6 text-center">
+          <div class="text-3xl font-bold stage-gradient-text mb-2">Engagement</div>
+          <p class="text-sm text-gray-500">Likes, comments, shares, saves</p>
+        </div>
+        <div class="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-6 text-center">
+          <div class="text-3xl font-bold stage-gradient-text mb-2">CTR</div>
+          <p class="text-sm text-gray-500">Click-through to landing pages</p>
+        </div>
+        <div class="bg-gradient-to-br from-gray-50 to-green-50 rounded-2xl p-6 text-center">
+          <div class="text-3xl font-bold stage-gradient-text mb-2">Time on Site</div>
+          <p class="text-sm text-gray-500">Content engagement depth</p>
+        </div>
+        <div class="bg-gradient-to-br from-gray-50 to-orange-50 rounded-2xl p-6 text-center">
+          <div class="text-3xl font-bold stage-gradient-text mb-2">Video Views</div>
+          <p class="text-sm text-gray-500">Completion rates & watch time</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="stage-gradient py-16 sm:py-20 text-white">
+    <div class="max-w-4xl mx-auto text-center px-4 sm:px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-6">Ready to Build Engagement?</h2>
+      <p class="text-lg opacity-90 mb-8">
+        Let's create content and social strategies that turn awareness into genuine interest.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="awareness.html" class="px-8 py-4 bg-white/20 backdrop-blur text-white font-semibold rounded-xl hover:bg-white/30 transition-all inline-flex items-center justify-center gap-2">
+          <i class="fas fa-arrow-left"></i>
+          Previous: Awareness
+        </a>
+        <a href="consideration.html" class="px-8 py-4 bg-white text-[#8b5cf6] font-semibold rounded-xl hover:bg-gray-100 transition-all inline-flex items-center justify-center gap-2">
+          Next: Consideration
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  </main>
+
+  <!-- Footer Component -->
+  <div data-component="footer" data-base-path="../../.."></div>
+
+  <!-- Scroll to Top -->
+  <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script>
+    document.getElementById('scroll-to-top')?.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    window.addEventListener('scroll', function() {
+      const scrollBtn = document.getElementById('scroll-to-top');
+      if (scrollBtn) {
+        scrollBtn.classList.toggle('visible', window.scrollY > 400);
+      }
+    }, { passive: true });
+  </script>
+</body>
+</html>
